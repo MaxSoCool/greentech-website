@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="picture/logot.png">
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <!-- Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;500&display=swap" rel="stylesheet">
+
+    <title>Global Warming เปลี่ยนโลก "ร้อน" เป็นโลก "รัก"</title>
+
+    <link rel ="stylesheet" href="/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body{
+        font-family: 'Kanit', sans-serif;
+        background-color:(black);
+        background-size: cover;
+        background-position: center;
+      }
+
+      .menu-bar{
+        background: #2c5462;
+        text-align: center;
+      }
+
+      .menu-bar ul{
+        display: inline-flex;
+        list-style: none;
+        color: #ffff;
+      }
+
+      .menu-bar ul li{
+        width: 200px;
+        margin: 15px;
+        padding: 15px;
+      }
+
+      .menu-bar ul li a{
+        text-decoration: none;
+        color: #ffff;
+      }
+
+      .active, .menu-bar ul li:hover{
+        background: #60868f;
+        border-radius: 4px;
+        transition: all 0.25s ease;
+      }
+
+      .menu-bar .bi{
+        margin-right: 12px;
+      }
+
+      .sub-menu-global{
+        display: none;
+      }
+
+      .menu-bar ul li:hover .sub-menu-global{
+        display: block;
+        position: absolute;
+        background: #2c5462;
+        margin-top: 15px;
+        margin-left: -15px;
+      }
+
+      .menu-bar ul li:hover .sub-menu-global ul{
+        display: block;
+        margin: 10px;
+
+      }
+
+      .menu-bar ul li:hover .sub-menu-global ul li{
+        width: 200px;
+        padding: 10px;
+        border-bottom: 2px dotted #ffff;
+        background: transparent;
+        border-radius: 0;
+        text-align: left;
+
+      }
+
+      .menu-bar ul li:hover .sub-menu-global ul li:last-child{
+        border-bottom: none;
+      }
+
+      .menu-bar ul li:hover .sub-menu-global ul li a:hover{
+        color:#f2cd93;
+      }
+
+      .article-danger{
+        width: 1200px;
+        height: 300px;
+        text-align: left;
+        margin: 0 auto;
+      }
+
+      .danger_header{
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .danger_info1{
+        width: 1000px;
+        height: 600px;
+        text-align: left;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 22px;
+        padding-top: 40px;
+      }
+
+      .danger_info2{
+        width: 1000px;
+        height: 350px;
+        text-align: justify;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 22px;
+        padding-top: 40px;
+      }
+
+      .danger_info3{
+        width: 1000px;
+        height: 600px;
+        text-align: left;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 22px;
+        padding-top: 40px;
+      }
+
+      .danger_info4{
+        width: 1000px;
+        height: 600px;
+        text-align: left;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 22px;
+        padding-top: 40px;
+      }
+
+      .danger_info5{
+        width: 1000px;
+        height: 600px;
+        text-align: left;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 22px;
+        padding-top: 40px;
+      }
+
+      .home-picture-static{
+        text-align: center;
+        background-color: #69868f;
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 60px 80px;
+      }
+
+      .home-header{
+        color: #ffff;
+        text-shadow: 4px 2.5px #333333;
+      }
+
+      .bodydy {
+          align-items: center;
+          background-color: #F3F5F7;
+          font-family: 'Poppins',
+              sans-serif;
+          width: 100%;
+          min-height: 100vh;
+          color: #1B1C34;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+
+
+      .containery {
+          max-width: 70%;
+          margin: 0 auto;
+          height: 100%;
+      }
+
+      .grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 3%;
+          margin: 5% 0;
+      }
+
+      .card {
+          overflow: hidden;
+          padding: 20px;
+          background-color: #FFF;
+          border-radius: 30px;
+          text-align: center;
+      }
+
+
+      .card_img img {
+          width: 100%;
+          height: auto;
+          border-radius: 20px;
+      }
+
+      .card_body {
+          padding: 26px 20px 36px 20px;
+      }
+
+      .card_title {
+          font-family: 'Kanit', sans-serif;
+          font-weight: 700;
+          text-transform: capitalize;
+
+          font-size: 28px;
+          padding-bottom: 20px;
+      }
+
+      .card_body p {
+          text-align: left;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 1.7;
+
+      }
+
+      p.card_author {
+          text-align: center;
+          font-size: 15px;
+          padding-top: 15px;
+
+      }
+
+      p.card_author a {
+          color: #1B1C34;
+          font-style: italic;
+      }
+
+      p.card_author a:hover {
+          font-weight: bold;
+      }
+
+      .link {
+          position: fixed;
+          background-color: #D12322;
+          padding: 23px 40px;
+          right: -106px;
+          border-radius: 5px;
+          top: 50%;
+          transform: translateY(-50%);
+          transform: rotate(-90deg);
+          font-size: 18px;
+          font-weight: 500;
+          color: #FFF;
+          text-decoration: none;
+          text-transform: capitalize;
+          transition: all .1s ease-in-out;
+      }
+
+      .link i {
+          padding-left: 7px;
+      }
+
+      .link:hover {
+          text-decoration: underline;
+          background-color: black;
+      }
+
+      @media only screen and (max-width: 1441px) and (min-width: 1025px) {
+          .container {
+              max-width: 80%;
+          }
+
+          .grid {
+              gap: 2%;
+          }
+
+          .card {
+              padding: 15px;
+          }
+
+          .card_body {
+              padding: 15px;
+          }
+
+          .card_title {
+              font-size: 22px;
+              padding-bottom: 14px;
+          }
+
+          .card_body p {
+              font-size: 16px;
+          }
+
+          a.read_more {
+              padding: 19px 0;
+              width: 60%;
+              font-size: 11px;
+              margin-top: 30px;
+          }
+
+      }
+
+      @media only screen and (max-width: 1024px) {
+
+          .grid {
+              grid-template-columns: 1fr;
+              gap: 2%;
+          }
+      }
+
+      @media only screen and (max-width: 425px) {
+          .container {
+              max-width: 90%;
+          }
+
+          .card {
+              padding: 20px 10px;
+          }
+
+          .card_body {
+              padding: 7px;
+          }
+
+          .card_title {
+              font-size: 20px;
+              padding-bottom: 7px;
+          }
+
+          .card_body p {
+              font-size: 14px;
+          }
+
+          a.read_more {
+              padding: 15px 0;
+              margin-top: 20px;
+          }
+
+      }
+      
+      footer{
+          background:#19353f;
+          height: auto;
+          width: auto;
+          padding-top: 140px;
+          color: #FFF;
+        }
+
+        .footer-content{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .footer-content h3{
+          font-size: 1.8rem;
+          font-weight: 400;
+          text-transform: capitalize;
+          line-height: 3rem;
+        }
+
+        .footer-content p{
+          max-width: 500px;
+          margin: 10px auto;
+          line-height: 28px;
+          font-size: 14px;
+        }
+
+        .footer-bottom {
+          background: #112830;
+          width: auto;
+          padding: 20px 0;
+          text-align: center;
+        }
+
+        .footer-bottom p{
+          font-size: 14px;
+          word-spacing: 2px;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class = "menu-bar"> 
+<ul>
+  <li><a href="page_home.html"><i class="bi bi-house-door-fill" ></i>หน้าหลัก</a></li>
+  <li class = "active" ><a href="#"><i class="bi bi-globe-asia-australia"></i>ภาวะโลกร้อน</a>
+    <div class="sub-menu-global">
+      <ul>
+        <li><a href="page_intro.html">ภาวะโลกร้อนคืออะไร</a></li>
+        <li><a href="#">ผลกระทบของภาวะโลกร้อน</a></li>
+        <li><a href="page_thai.html">ภาวะโลกร้อนในประเทศไทย</a></li>
+      </ul>
+    </div>
+  </li>
+
+  <li><a href="page_takecare.html"><i class="bi bi-chat-heart-fill"></i>การรับมือ</a></li>
+  <li><a href="#static"><i class="bi bi-clipboard-data-fill"></i>สถานการณ์ปัจจุบัน</a></li>
+  <li><a href="#"><i class="bi bi-question-circle-fill"></i>เกี่ยวกับ</a>
+    <div class = "sub-menu-global">
+      <ul>
+        <li><a href="page_about.html">รายละเอียดโครงงาน</a></li>
+        <li><a href="page_credit.html">แหล่งที่มาข้อมูล</a></li>
+      </ul>
+    </div>
+  </li>
+</ul>
+</div>
+
+<article class="danger">
+    <h1 class="danger_header"> ผลกระทบของภาวะโลกร้อน </br> (Climate Change) </h1>
+    <center><img src="https://media.thairath.co.th/image/OPgoKWfAUcHNfcjgLVQ8NmG9wBfRl9MDJW3Qk27B31ce9vA1.png" height="40%" width="40%"></br> ภาพ: https://plus.thairath.co.th/topic/naturematter/102009 </center>
+    <p class="danger_info1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ถึงแม้ว่าในปัจจุบันอุณหภูมิโดยเฉลี่ยของโลกอาจสูงขึ้นไม่มากนัก แต่มันได้ส่งผลกระทบต่อระบบนิเวศวิทยา และความแปรปรวนของสภาพอากาศไปทั่วทุกหนแห่ง ตัวอย่างที่เห็นชัด คือ การละลายของน้ำแข็งขั้วโลก ทั้งที่เป็นธารน้ำแข็ง (glaciers) และสภาพอากาศที่แปรปรวนทั่วโลก ความรุนแรงของพายุและผลเสียหายที่เกิดขึ้น บางบริเวณของโลกประสบกับ ความแห้งแล้งอย่างไม่เคยมีมาก่อน 
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ปัจจุบันชาวโลกกำลังประสบปัญหากับความแปรปรวนของภูมิอากาศ อาทิ เช่นกลางเดือนกรกฎาคม 2007 ที่เมืองฉงชิ่งและหลายพื้นที่ของมลฑลเสฉวน ประเทศจีนมีฝนตกหนักจนเกิดน้ำท่วม สร้างความเสียหายมหาศาลมากกว่าภัยแล้งที่เคยเกิดขึ้นเมื่อหลายศตวรรษที่ผ่านมา
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เมื่อวันที่ 22 กรกฎาคม 2007 ที่ประเทศอาร์เจนตินาเกิดหิมะตก กรมอุตุนิยมวิทยาของอาร์เจนตินาเปิดเผยว่า เกิดปรากฏการณ์ประหลาดขึ้นเป็นครั้งแรกในรอบเกือบร้อยปี เมื่อหิมะตกหนักติดต่อกันหลายชั่วโมงหลายพื้นที่ในกรุงบูเอโนสไอเรส บางแห่งมีหิมะตกหนัก จนมองเห็นเป็นสีขาวโพลน ทำให้ชาวกรุงบูเอโนสไอเรสต่างตกตะลึงไปตามๆ กัน เพราะเป็นครั้งแรกที่มีหิมะตกในนครหลวงแห่งนี้นับตั้งแต่ปี 1918 เป็นต้นมา หลังจากนั้นก็ไม่เคยมีหิมะตกอีกเลย อย่างมากที่สุดมีแค่ลูกเห็บตกเป็นครั้งคราว
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เมื่อปลายเดือนกรกฎาคม ของปี 1996 คลื่นความร้อนได้ปรากฏขึ้นทางตอนใต้ของยุโรป ทำให้ประชนชนทนอากาศร้อนไม่ไหวจนเสียชีวิตในที่สุดกว่า 10 คนในโรมาเนียและบังกลาเลีย อุณหภูมิสูงถึง 45 องศาเซลเซียส สูงกว่าสถิติที่เคยบันทึกไว้ ในขณะที่ประเทศอังกฤษ เกิดฝนตกหนักน้ำท่วมรุนแรง ประชาชนไม่มีไฟฟ้าใช้ขาดแคลนน้ำาดื่มน้ำใช้ในการอุปโภคบริโภค สร้างความเสียหายอย่างมหาศาล </p>
+
+    <center><img src="https://www.travelandleisure.com/thmb/lFk4s2pGCWKx6J5xLs72Si8sVGE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-gondola-dry-canal-venice-italy-DRYVENICE0223-3cb1d6df159e4dadbac5d0324b9bc5c7.jpg" height="20%" width="20%"></br> ภาพของคลองเวนิสที่แห้งเหือดจากภัยแล้ง : https://www.travelandleisure.com/venice-italy-drought-canals-7112387 </center>
+    <p class="danger_info2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;และล่าสุดเมื่อปลายปีที่ผ่านมา ระดับน้ำในคลองเวนิส สถานที่ท่องเที่ยวสำคัญของอิตาลีลดต่ำลงจนเรือไม่สามารถสัญจรได้ แม้ว่าหลายปีที่ผ่านมาเวนิสจะต้องเผชิญกับสภาวะระดับน้ำสูงขึ้นจนน้ำท่วมเมือง เช่นในปี 2019 ระดับน้ำในเวนิสเพิ่มสูงที่สุดในรอบ 50 ปี แต่ภาพคลองในเวนิสแห้งเหือดในปีนี้บ่งบอกถึงสัญญาณว่าอิตาลีอาจจะต้องเจอภัยแล้งอย่างหนักอย่างแน่นอน
+    </br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ผลกระทบจากภัยโลกร้อนยังถูกแบ่งออกเป็นอีก 3 ด้านดังนี้
+    </br></br><b>1. ผลกระทบด้านนิเวศวิทยา</b></p>
+
+    <center><img src="https://www.greenqueen.com.hk/wp-content/uploads/2022/10/green-queen-is-global-warming-real-1.jpg" height="40%" width="40%"></br> ภาพ: https://www.greenqueen.com.hk/is-global-warming-real/ </center>
+    <p class="danger_info3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;แถบขั้วโลกได้รับผลกระทบมากสุดและก่อให้เกิดการเปลี่ยนแปลงมากมาย โดยเฉพาะอย่างยิ่งภูเขาน้ำแข็ง ก้อนน้ำแข็งจะละลายอย่างรวดเร็ว ทำให้ระดับน้ำทะเลทางขั้วโลกเพิ่มขึ้น และไหลลงสู่ทั่วโลกทำให้เกิดน้ำท่วมได้ทุกทวีป นอกจากนี้จะพลอยทำให้สัตว์ทางทะเลเสียชีวิตเพราะระบบนิเวศเปลี่ยนแปลง ส่วนทวีปยุโรป ยุโรปใต้ภูมิประเทศจะกลายเป็นพื้นที่ลาดเอียงเกิดความแห้งแล้ง ในหลายพื้นที่ปัญหาอุทกภัยจะเพิ่มขึ้นเนื่องจากธารน้ำแข็งบนบริเวณยอดเขาสูงที่ปกคลุมด้วยหิมะจะละลายจนหมด ขณะที่เอเชียอุณหภูมิจะสูงขึ้นเกิดฤดูกาลที่แห้งแล้ง มีน้ำท่วม ผลิตผลทางอาหารลดลง ระดับน้ำทะเลสูงขึ้นสภาวะอากาศ แปร ปรวนอาจทำให้เกิดพายุต่าง ๆ มากมายเข้าไปทำลายบ้านเรือนที่อยู่อาศัยของประชาชน ซึ่งปัจจุบันก็เห็นผลกระทบได้ชัด เช่น การเกิดพายุใต้ฝุ่น แต่แถบทวีปอเมริกาเหนืออุตสาหกรรมการผลิตอาหารจะได้รับผลประโยชน์เนื่องจากอากาศที่อุ่นขึ้น พร้อม ๆ กับทุ่งหญ้าใหญ่ของแคนาดาและทุ่งราบใหญ่สหรัฐอเมริกา
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;นักวิจัยได้มีการคาดประมาณอุณหภูมิผิวโลกในอีก 100 ปีข้างหน้า หรือประมาณปี 2643 ว่า อุณหภูมิจะสูงขึ้นจากปัจจุบันราว 4.5 องศาเซลเซียส เนื่องจากคาดการณ์ว่าจะมีการปล่อยก๊าซคาร์บอนไดออกไซด์ถึงร้อยละ 63 และก๊าซมีเทนร้อยละ 27 ของก๊าซเรือนกระจก สำหรับประเทศไทยมีอุณหภูมิสูงขึ้นประมาณ 1 องศาเซลเซียส ในช่วง 40 ปี อย่างไรก็ตาม หากอุณหภูมิเพิ่มสูงขึ้น 2- 4 องศาเซลเซียส จะทำให้พายุไต้ฝุ่นเปลี่ยนทิศทางเกิดความรุนแรง และมีจำนวนเพิ่มขึ้นร้อยละ 10-20 ในอนาคต นอกจากนี้ ฤดูร้อนจะขยายเวลายาวนานขึ้น ในขณะที่ฤดูหนาวจะสั้นลง
+    </br></br><b>2. ผลกระทบด้านเศรษฐกิจ</b></p>
+
+    <center><img src="https://imageio.forbes.com/specials-images/imageserve/1028826792/0x0.jpg?format=jpg&crop=8000,4500,x0,y248,safe&width=1200" height="40%" width="40%"></br> ภาพ: https://www.forbes.com/sites/sergeiklebnikov/2019/10/28/</br>here-are-the-countries-on-the-brink-of-recession-going-into-2020/?sh=522a62f93017 </center>
+    <p class="danger_info4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;รัฐที่เป็นเกาะเล็ก ๆ ของทวีปอเมริกาจะได้รับผลจากระดับน้ำทะเลที่สูงขึ้นกัดกร่อนชายฝั่ง จะสร้างความเสียหายแก่ระบบนิเวศ แนวปะการังจะถูกทำลาย ปลาทะเลประสบปัญหา เนื่องจากระบบนิเวศที่แปรเปลี่ยนไป ธุรกิจท่องเที่ยวทางทะเลที่สำคัญจะสูญเสียรายได้มหาศาล นอกจากนี้ ในเอเชียยังมีโอกาสร้อยละ 66-90 ที่อาจเกิดฝนกระหน่ำและมรสุมอย่างรุนแรง รวมถึงเกิดความแห้งแล้งในฤดูร้อนที่ยาวนาน ทั้งนี้ ในปี 2532-2545 ประเทศไทยเกิดความเสียหาย จากอุทกภัย พายุ และภัยแล้ง คิดเป็นมูลค่าเสียหายทางเศรษฐกิจมากกว่า 70,000 ล้านบาท
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;รายงาน " Global Deserts Outlook" ของโครงการสิ่งแวดล้อมแห่งสหประชาชาติ เนื่องในวันสิ่งแวดล้อมโลก 5 มิถุนายน ชี้ว่า ภายใน 50 ปีข้างหน้า ระบบนิเวศวิทยาทะเลทราย จะเปลี่ยนแปลงไปทั้งด้านชีววิทยา เศรษฐกิจและวัฒนธรรม ปัจจุบันพืชและสัตว์ทะเลทราย คือแหล่งทรัพยากรมีคุณค่าสำหรับผลิตยาและธัญญาหารใหม่ๆ ที่ทำให้ไม่ต้องสิ้นเปลืองน้ำและยังมีช่องทางเศรษฐกิจใหม่ๆ ที่เป็นมิตรกับธรรมชาติ เช่น การทำฟาร์มกุ้งและบ่อปลาในทะเลทรายรัฐอาริโซนาและทะเลทรายเน เจฟในอิสราเอล อย่างไรก็ตาม ทะเลทรายที่มีอยู่ 12 แห่งทั่วโลก กำลังเผชิญปัญหาใหญ่ ไม่ใช่เรื่องการขยายตัว แต่เป็นความแห้งแล้งเนื่องจากโลกร้อน ธารน้ำแข็งซึ่งส่งน้ำมาหล่อเลี้ยงทะเลทรายในอเมริกาใต้กำลังละลาย น้ำใต้ดินเค็มขึ้น รวมทั้งผลกระทบที่เกิดจากน้ำมือมนุษย์ ซึ่งหากไม่มีการลงมือป้องกันอย่างทันท่วงที ระบบนิเวศวิทยาและสัตว์ป่าในทะเลทรายจะสูญหายไปภายใน 50 ปีข้างหน้า ในอนาคตประชากร 500 ล้านคนที่อาศัยอยู่ในเขตทะเลทรายทั่วโลกจะอยู่ไม่ได้อีกต่อไป เพราะอุณหภูมิสูงขึ้นและน้ำถูกใช้จนหมดหรือเค็มจนดื่มไม่ได้
+    </br></br><b>3. ผลกระทบด้านสุขภาพ</b></p>
+
+    <center><img src="https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2021-12/211215-diagnosis-climate-change-2x1-cs-95c46c.jpg" height="40%" width="40%"></br> ภาพ: https://www.nbcnews.com/news/us-news/climate-change-diagnosis-reflects-latest-trend-health-care-rcna7429 </center>
+    <p class="danger_info5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ภาวะโลกร้อนไม่เพียง ทำให้ระบบนิเวศเปลี่ยนแปลงไปแต่มีสิ่งซ่อนเร้นที่แอบแฝงมาพร้อม ปรากฏการณ์นี้ด้วยว่าโลกร้อนขึ้นจะสร้างสภาวะที่พอเหมาะพอควรให้เชื้อโรคเจริญเติบโตอย่างรวดเร็ว โลกร้อนขึ้นจะก่อให้เกิด สภาพแวดล้อมที่เหมาะสมแก่การฟักตัวของเชื้อโรคและศัตรูพืช ที่เป็นอาหารของมนุษย์บางชนิด โรคที่ฟักตัวได้ดีในสภาพร้อนชื้นของโลก จะสามารถเพิ่มขึ้นมากในอีก 20 ปีข้างหน้า ทั้งจะมีการติดเชื้อเพิ่มมากขึ้นในโรคมาลาเรีย ไข้ส่า อหิวาตกโรค และอาหารเป็นพิษนักวิทยาศาสตร์ในที่ประชุมองค์การอนามัยโลก และ London School of Hygiene and Tropical Medicine วิทยาลัยศึกษาด้านสุขอนามัยและเวชศาสตร์เขตร้อนของอังกฤษ แถลงว่า ในแต่ละปีประชาชนราว 160,000 คนเสียชีวิตเพราะได้รับผลกระทบจากภาวะโลกร้อน ตั้งแต่โรคมาลาเรีย ไปจนถึงการขาดแคลนสุขอนามัยที่ดี และตัวเลขผู้เสียชีวิตนี้อาจเพิ่มขึ้นเกือบสองเท่าตัวในอีก 17 ปีข้างหน้า แถลงการณ์ของคณะแพทย์ระดับโลกระบุว่า เด็กในประเทศกำลังพัฒนาจัดอยู่ในกลุ่มเสี่ยงมากที่สุด เช่นในประเทศแถบแอฟริกา ละตินอเมริกา และเอเชียตะวันออกเฉียงใต้ ที่จะต้องเผชิญกับการแพร่ขยายของการขาดแคลนสุขอนามัยโรคท้องร่วง และโรคมาเลเรีย ท่ามกลางอุณหภูมิโลกร้อนขึ้น น้ำท่วม และภัยแล้ง
+</article>
+
+<div class="home-picture-static">
+  <div class="col-md-5 p-lg-5 mx-auto my-5">
+    <h1 id = "static" class="home-header">สถานการณ์โลกร้อนปัจจุบัน</h1>
+  </div>
+</div>
+
+<div class="containerer">
+  <div class="grid">
+      <div class="card">
+          <div class="card_img">
+              <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/445F/production/_119330571_gettyimages-1229925855.jpg" alt="">
+          </div>
+          <div class="card_body">
+              <h2 class="card_title">ภาวะโลกร้อนเปลี่ยนแปลงสภาพป่าไม้</br>ของแคนนาดาไปมากขนาดไหน?</h2>
+              <p>เมื่อวันที่ 3 กรกฎาคม 2022 ที่ผ่านมา ได้เกิดเหตุไฟป่าบริเวณตะวันตกของประเทศแคนนาดา ผู้เชี่ยวชาญชี้ว่าการเปลี่ยนแปลงสภาพภูมิอากาศเป็นสาเหตุให้เกิดไฟป่าในช่วงต้นและช่วงที่อากาศร้อนจัด ส่งผลให้มีก๊าซเผาไหม้ถูกปล่อยสู่ชั้นบรรยากาศเป็นจำนวนมาก และยังมีผู้เสียชีวิตจากเหตุการณ์ดังกล่าวอีกด้วย </p>
+              <p class="card_author">ขอขอบคุณข้อมูลจาก <a href="https://blog.resolutefp.com/2017/07/climate-change-affecting-canadas-forests/" target="_blank" class="author_link">The Resolute Blog</a></p>
+          </div>
+      </div>
+      <div class="card">
+          <div class="card_img">
+              <img src="https://www.innovationnewsnetwork.com/wp-content/uploads/2021/07/iStock-Revolu7ion93-696x392.jpg" alt="">
+          </div>
+          <div class="card_body">
+              <h2 class="card_title">พายุแถบยุโรปทวีความรุนแรงขึ้นทุกปี</br>จากภาวะโลกร้อน</h2>
+              <p>จากการศึกษาและสำรวจของมหาวิทยาลัยนิวคาสเซิล สหราชอาณาจักร และทีมวิจัยเดอะเมท ออฟฟิส พบว่า ความถี่ในการเกิดพายุในประเทศแถบยุโรปและใกล้เคียงเกิดขึ้นอย่างต่อเนื่องและทวีความรุนแรงขึ้นเรื่อยๆ จากการเปลี่ยนแปลงทางสภาพอากาศในช่วงหลายปีมานี้</p>
+              <p class="card_author">ขอขอบคุณข้อมูลจาก <a href="https://www.innovationnewsnetwork.com/european-storms-exacerbated-by-the-effects-of-climate-change/13292/" target="_blank" class="author_link">สำนักข่าว Innovasion Newsnetwork</a></p>
+          </div>
+      </div>
+      <div class="card">
+          <div class="card_img">
+              <img src="https://www.thaifrx.com/wp-content/uploads/2022/08/220829170402-greenland-icebergs-file-063022-super-tease.jpg" alt="">
+          </div>
+          <div class="card_body">
+              <h2 class="card_title">ระดับน้ำทะเลมีความสูงขึ้นอย่างมาก </br>ผู้คนนับร้อยล้านอาจไร้ถิ่นที่อยู่</h2>
+              <p>ระดับน้ำทะเลของโลกสูงขึ้นทุกๆ ปี นับตั้งแต่หมดยุคน้ำแข็งเมื่อ 18,000 ปีที่ผ่านมา อุณหภูมิที่มากขึ้นของโลกค่อยๆ ส่งผลให้โลกมีระดับน้ำที่สูงขึ้น ทั้งแผ่นน้ำแข็งขั้วโลกที่ละลายจากการเปลี่ยนแปลงของอุณหภูมิในช่วงศวรรตที่ผ่านมา ประเทศแถบชายฝั่งทะเลและประเทศที่อยู่ระดับต่ำกว่าน้ำทะเลจะได้รับผลกระทบมากที่สุด</p>
+              <p class="card_author">ขอขอบคุณข้อมูลจาก <a href="http://www.climate.tmd.go.th/content/article/20" target="_blank" class="author_link">กรมอุตุนิยมวิทยา</a></p>
+          </div>
+      </div>
+      <div class="card">
+        <div class="card_img">
+            <img src="https://i0.wp.com/eos.org/wp-content/uploads/2021/12/petm-fish-warming.jpg?fit=1200%2C675&ssl=1" alt="">
+        </div>
+        <div class="card_body">
+            <h2 class="card_title">ปลากว่าร้อยสายพันธุ์อพยพขึ้นทางเหนือ</br>เพื่อหนีการเปลี่ยนแปลงของสภาพอากาศ</h2>
+            <p>ชาวประมงอังกฤษและทั่วโลกต่างได้รายงานถึงผลกระทบของภาวะโลกร้อนที่ส่งผลต่อการล่าปลาที่ผันผวน เพราะปลาและหอยหลายชนิดที่เคยหาได้ ต่างอพยพเพื่อหนีการเปลี่ยนแปลงทางสภาพอากาศที่พวกมันไม่คุ้นเคย ส่งผลต่อทั้งเศรษฐกิจและระบบนิเวศดั้งเดิมของพวกมันเป็นอย่างมาก</p>
+            <p class="card_author">ขอขอบคุณข้อมูลจาก <a href="https://www.independent.co.uk/climate-change/news/fish-migrate-climate-change-north-seafood-fishermen-cod-sea-bass-king-crab-a8354861.html" target="_blank" class="author_link">สำนักข่าว Independent </a></p>
+        </div>
+    </div>
+    <div class="card">
+      <div class="card_img">
+          <img src="https://media.cnn.com/api/v1/images/stellar/prod/230221094230-01-venice-low-tide-021623-restricted.jpg?c=original" alt="">
+      </div>
+      <div class="card_body">
+          <h2 class="card_title">ภัยแล้งทำพิษคลองเวนิชระดับน้ำต่ำ</h2>
+          <p>ภาพคลองในเวนิสแห้งเหือดในปีนี้บ่งบอกถึงสัญญาณว่าอิตาลีอาจจะต้องเจอภัยแล้งอย่างหนัก ทั้งนี้นอกจากคลื่นความร้อนเมื่อช่วงต้นปีที่ส่งผลกระทบแล้ว อิตาลียังประสบภาวะแล้งเป็นระยะเวลานานตั้งแต่ช่วงฤดูร้อนในปี 2022 ซึ่งเป็นผลจากเกิดหิมะบนเทือกเขาแอลป์น้อยเกินไปตามข้อมูลของผู้เชี่ยวชาญด้านสิ่งแวดล้อม</p>
+          <p class="card_author">ขอขอบคุณข้อมูลจาก <a href="https://www.greenpeace.org/thailand/story/26510/climate-venice-drought/" target="_blank" class="author_link">Greenpeace Thailand</a></p>
+      </div>
+  </div>
+  <div class="card">
+    <div class="card_img">
+        <img src="https://media.npr.org/assets/img/2022/03/25/gettyimages-1204403352_custom-b57f1586125913ba175169785d6459210a281ca7-s1100-c50.jpg" alt="">
+    </div>
+    <div class="card_body">
+        <h2 class="card_title">โลกร้อนกระทบแนวปะการังฟอกขาว 3 ปีซ้อน</h2>
+        <p>นักวิทยาศาสตร์ ชี้ปีนี้ทั่วโลกเผชิญปัญหาปะการังฟอกขาวคิดเป็นร้อยละ 33 ของแนวปะการังทั่วโลก แนวโน้มจะรุนแรงและถี่มากขึ้น หลังการเปลี่ยนแปลงของสภาพภูมิอากาศ ทำให้อุณหภูมิน้ำทะเลสูงขึ้น หากปะการังทั่วโลกสูญพันธุ์กระทบชีวิตมนุษย์และสัตว์ที่เหลืออยู่</p>
+        <p class="card_author">ขอขอบคุณข้อมูลจาก <a href="https://www.thaipbs.or.th/news/content/280320" target="_blank" class="author_link">สำนักข่าว Thai PBS</a></p>
+    </div>
+</div>
+  </div>
+</div>
+
+  <footer>
+    <div class="footer-content">
+      <h3>Global Warming เปลี่ยนโลกร้อน เป็นโลกรัก</h3>
+      <p>เว็บไซต์เพื่อการเรียนรู้จากโครงงาน "เว็บหรรษา พารักโลก" </br> วิชาเทคโนโลยีสีเขียว 03600012 หมู่ 1 </p>
+    </div>
+
+    <div class="footer-bottom">
+      <p>ออกแบบและสร้างเว็บโดยพวกเรากลุ่ม Big_juan</p>
+    </div>
+  </footer>
+
+    <script src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

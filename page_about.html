@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="picture/logot.png">
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <!-- Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;500&display=swap" rel="stylesheet">
+
+    <title>Global Warming เปลี่ยนโลก "ร้อน" เป็นโลก "รัก"</title>
+
+    <link rel ="stylesheet" href="/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body{
+        font-family: 'Kanit', sans-serif;
+        background-color:(black);
+        background-size: cover;
+        background-position: center;
+      }
+
+      .menu-bar{
+        background: #2c5462;
+        text-align: center;
+      }
+
+      .menu-bar ul{
+        display: inline-flex;
+        list-style: none;
+        color: #ffff;
+      }
+
+      .menu-bar ul li{
+        width: 200px;
+        margin: 15px;
+        padding: 15px;
+      }
+
+      .menu-bar ul li a{
+        text-decoration: none;
+        color: #ffff;
+      }
+
+      .active, .menu-bar ul li:hover{
+        background: #60868f;
+        border-radius: 4px;
+        transition: all 0.25s ease;
+      }
+
+      .menu-bar .bi{
+        margin-right: 12px;
+      }
+
+      .sub-menu-global{
+        display: none;
+      }
+
+      .menu-bar ul li:hover .sub-menu-global{
+        display: block;
+        position: absolute;
+        background: #2c5462;
+        margin-top: 15px;
+        margin-left: -15px;
+      }
+
+      .menu-bar ul li:hover .sub-menu-global ul{
+        display: block;
+        margin: 10px;
+
+      }
+
+      .menu-bar ul li:hover .sub-menu-global ul li{
+        width: 200px;
+        padding: 10px;
+        border-bottom: 2px dotted #ffff;
+        background: transparent;
+        border-radius: 0;
+        text-align: left;
+
+      }
+
+      .menu-bar ul li:hover .sub-menu-global ul li:last-child{
+        border-bottom: none;
+      }
+
+      .menu-bar ul li:hover .sub-menu-global ul li a:hover{
+        color:#f2cd93;
+      }
+
+      .article-takecare{
+        width: 1200px;
+        height: 300px;
+        text-align: left;
+        margin: 0 auto;
+      }
+
+      .takecare_header{
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .takecare_info1{
+        width: 1000px;
+        height: 950px;
+        text-align: left;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 22px;
+        padding-top: 40px;
+      }
+
+      .takecare_info2{
+        width: 1000px;
+        height: 300px;
+        text-align: justify;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 22px;
+        padding-top: 40px;
+      }
+
+      .takecare_info3{
+        width: 1000px;
+        height: 300px;
+        text-align: left;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 22px;
+        padding-top: 40px;
+      }
+
+      .takecare_info4{
+        width: 1000px;
+        height: 300px;
+        text-align: left;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 22px;
+        padding-top: 40px;
+      }
+
+      .takecare_info5{
+        width: 1000px;
+        height: 700px;
+        text-align: left;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 22px;
+        padding-top: 40px;
+      }
+
+      .home-picture-static{
+        text-align: center;
+        background-color: #69868f;
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 60px 80px;
+      }
+
+      .home-header{
+        color: #ffff;
+        text-shadow: 4px 2.5px #333333;
+      }
+
+      footer{
+          background:#19353f;
+          height: auto;
+          width: auto;
+          padding-top: 140px;
+          color: #FFF;
+        }
+
+        .footer-content{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .footer-content h3{
+          font-size: 1.8rem;
+          font-weight: 400;
+          text-transform: capitalize;
+          line-height: 3rem;
+        }
+
+        .footer-content p{
+          max-width: 500px;
+          margin: 10px auto;
+          line-height: 28px;
+          font-size: 14px;
+        }
+
+        .footer-bottom {
+          background: #112830;
+          width: auto;
+          padding: 20px 0;
+          text-align: center;
+        }
+
+        .footer-bottom p{
+          font-size: 14px;
+          word-spacing: 2px;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class = "menu-bar"> 
+<ul>
+  <li><a href="page_home.html"><i class="bi bi-house-door-fill" ></i>หน้าหลัก</a></li>
+  <li><a href="#"><i class="bi bi-globe-asia-australia"></i>ภาวะโลกร้อน</a>
+    <div class="sub-menu-global">
+      <ul>
+        <li><a href="page_intro.html">ภาวะโลกร้อนคืออะไร</a></li>
+        <li><a href="page_danger.html">ผลกระทบของภาวะโลกร้อน</a></li>
+        <li><a href="page_thai.html">ภาวะโลกร้อนในประเทศไทย</a></li>
+      </ul>
+    </div>
+  </li>
+
+  <li><a href="page_takecare.html"><i class="bi bi-chat-heart-fill"></i>การรับมือ</a></li>
+  <li><a href="#static"><i class="bi bi-clipboard-data-fill"></i>สถานการณ์ปัจจุบัน</a></li>
+  <li  class = "active" ><a href="#"><i class="bi bi-question-circle-fill"></i>เกี่ยวกับ</a>
+    <div class = "sub-menu-global">
+      <ul>
+        <li><a href="#">รายละเอียดโครงงาน</a></li>
+        <li><a href="page_credit.html">แหล่งที่มาข้อมูล</a></li>
+      </ul>
+    </div>
+  </li>
+</ul>
+</div>
+
+<article class="takecare">
+    <h1 class="takecare_header"> รายละเอียดของโครงงาน</h1>
+    <center><img src="https://i.kym-cdn.com/entries/icons/original/000/035/644/juancover.jpg" height="40%" width="40%"></br> ภาพ: https://knowyourmeme.com/memes/juan-horse-on-balcony </center>
+    <p class="takecare_info1"><b>ชื่อโครงงาน:</b> เว็บหรรษา พารักโลก
+    </br><b>ชื่อกลุ่ม:</b> Big_juan
+    </br><b>ลักษณะโครงงาน:</b> สื่อความรู้ / โปรแกรมคอมพิวเตอร์
+    </br><b>คลิปวิดีโอนำเสนอ:</b> <a href="https://www.youtube.com/watch?v=mGFZW5SHNsE">คลิ๊กเพื่อรับชมผ่าน Youtube</a>
+    </br><b>วิชา:</b> เทคโนโลยีสีเขียว 03600012 หมู่ 1 (จันทร์-เช้า)
+    </br><b>คณะผู้จัดทำ:</b> 
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. นายทิณวุฒิ พลบำรุง 6540201180 (Team ออกแบบ)
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. นายพีระพงษ์ เทพประสิทธิ์ 6540202410 (Team ออกแบบ)
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. นายวัชรากร เครือเนตร 6540202964 (Team ออกแบบ)
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. นายทวีศักดิ์ สีอังรัตน์ 6540201149 (Team รายงาน)
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5. นายปรัชชฎางค์กรณ์ แก้วมณีโชติ 6540201909 (Team เขียนเว็บ)
+    </br>
+    </br><b>รายละเอียด:</b>
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เว็บไซต์นี้ถูกสร้างขึ้นเพื่อเป็นชิ้นงานของโครงงาน วิชาเทคโนโลยีสีเขียว 03600012 หมู่ 1 มีจุดประสงค์เพื่อให้ผู้อ่านและผู้ที่สนใจได้รับความรู้เกี่ยวกับภาวะโลกร้อน ทั้งต้นกำเนิด สาเหตุ และวิธีการรับมือ เพื่อเป็นการผลักดันและส่งเสริมการรักโลก โดยที่ข้อมูลต่างๆ ที่ปรากฎในเว็บเกิดจากการรวมรวมข้อมูลของคณะผู้จัดทำจากข่าว บทความ หนังสือหรือเว็บไซต์ต่างๆ โดยได้มีการตีความและจัดเรียงข้อมูลใหม่เพื่อให้เข้ากับหัวข้อและการนำเสนอของคณะผู้จัดทำ โดยไม่แสวงหารายได้ใดๆ จากข้อมูลเหล่านี้ อีกทั้งยังได้มีการให้เครดิตแหล่งที่มาของข้อมูลสำหรับผู้ที่สนใจหรือผู้ที่ต้องการศึกษาข้อมูลเพิ่มเติมเชิงลึก
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ทางคณะผู้จัดทำหวังเป็นอย่างยิ่งว่า เว็บไซต์เพื่อการเรียนรู้นี้จะมีประโยชน์ต่อผู้อ่านและผู้ที่สนใจได้ไม่มากก็น้อย และหากมีข้อผิดพลาดประการใด ทางคณะผู้จัดทำกราบขออภัยมา ณ ที่นี้ด้วยครับผม
+    </br>
+    </br><b>แหล่งที่มาข้อมูล:</b> <a href="page_credit.html">คลิ๊กเพื่อดูรายละเอียด</a>
+    </p>
+
+</article>
+
+  <footer>
+    <div class="footer-content">
+      <h3>Global Warming เปลี่ยนโลกร้อน เป็นโลกรัก</h3>
+      <p>เว็บไซต์เพื่อการเรียนรู้จากโครงงาน "เว็บหรรษา พารักโลก" </br> วิชาเทคโนโลยีสีเขียว 03600012 หมู่ 1 </p>
+    </div>
+
+    <div class="footer-bottom">
+      <p>ออกแบบและสร้างเว็บโดยพวกเรากลุ่ม Big_juan</p>
+    </div>
+  </footer>
+
+    <script src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

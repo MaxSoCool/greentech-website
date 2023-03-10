@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="picture/logot.png">
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <!-- Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;500&display=swap" rel="stylesheet">
+
+    <title>Global Warming เปลี่ยนโลก "ร้อน" เป็นโลก "รัก"</title>
+
+    <link rel ="stylesheet" href="/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body{
+        font-family: 'Kanit', sans-serif;
+        background-color:(black);
+        background-size: cover;
+        background-position: center;
+      }
+
+      .menu-bar{
+        background: #2c5462;
+        text-align: center;
+      }
+
+      .menu-bar ul{
+        display: inline-flex;
+        list-style: none;
+        color: #ffff;
+      }
+
+      .menu-bar ul li{
+        width: 200px;
+        margin: 15px;
+        padding: 15px;
+      }
+
+      .menu-bar ul li a{
+        text-decoration: none;
+        color: #ffff;
+      }
+
+      .active, .menu-bar ul li:hover{
+        background: #60868f;
+        border-radius: 4px;
+        transition: all 0.25s ease;
+      }
+
+      .menu-bar .bi{
+        margin-right: 12px;
+      }
+
+      .sub-menu-global{
+        display: none;
+      }
+
+      .menu-bar ul li:hover .sub-menu-global{
+        display: block;
+        position: absolute;
+        background: #2c5462;
+        margin-top: 15px;
+        margin-left: -15px;
+      }
+
+      .menu-bar ul li:hover .sub-menu-global ul{
+        display: block;
+        margin: 10px;
+
+      }
+
+      .menu-bar ul li:hover .sub-menu-global ul li{
+        width: 200px;
+        padding: 10px;
+        border-bottom: 2px dotted #ffff;
+        background: transparent;
+        border-radius: 0;
+        text-align: left;
+
+      }
+
+      .menu-bar ul li:hover .sub-menu-global ul li:last-child{
+        border-bottom: none;
+      }
+
+      .menu-bar ul li:hover .sub-menu-global ul li a:hover{
+        color:#f2cd93;
+      }
+
+      .article-takecare{
+        width: 1200px;
+        height: 300px;
+        text-align: left;
+        margin: 0 auto;
+      }
+
+      .takecare_header{
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .takecare_info1{
+        width: 1000px;
+        height: 350px;
+        text-align: left;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 22px;
+        padding-top: 40px;
+      }
+
+      .takecare_info2{
+        width: 1000px;
+        height: 300px;
+        text-align: justify;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 22px;
+        padding-top: 40px;
+      }
+
+      .takecare_info3{
+        width: 1000px;
+        height: 300px;
+        text-align: left;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 22px;
+        padding-top: 40px;
+      }
+
+      .takecare_info4{
+        width: 1000px;
+        height: 300px;
+        text-align: left;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 22px;
+        padding-top: 40px;
+      }
+
+      .takecare_info5{
+        width: 1000px;
+        height: 700px;
+        text-align: left;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 22px;
+        padding-top: 40px;
+      }
+
+      .home-picture-static{
+        text-align: center;
+        background-color: #69868f;
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 60px 80px;
+      }
+
+      .home-header{
+        color: #ffff;
+        text-shadow: 4px 2.5px #333333;
+      }
+
+      .bodydy {
+          align-items: center;
+          background-color: #F3F5F7;
+          font-family: 'Poppins',
+              sans-serif;
+          width: 100%;
+          min-height: 100vh;
+          color: #1B1C34;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+
+
+      .containery {
+          max-width: 70%;
+          margin: 0 auto;
+          height: 100%;
+      }
+
+      .grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 3%;
+          margin: 5% 0;
+      }
+
+      .card {
+          overflow: hidden;
+          padding: 20px;
+          background-color: #FFF;
+          border-radius: 30px;
+          text-align: center;
+      }
+
+
+      .card_img img {
+          width: 100%;
+          height: auto;
+          border-radius: 20px;
+      }
+
+      .card_body {
+          padding: 26px 20px 36px 20px;
+      }
+
+      .card_title {
+          font-family: 'Kanit', sans-serif;
+          font-weight: 700;
+          text-transform: capitalize;
+
+          font-size: 28px;
+          padding-bottom: 20px;
+      }
+
+      .card_body p {
+          text-align: left;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 1.7;
+
+      }
+
+      p.card_author {
+          text-align: center;
+          font-size: 15px;
+          padding-top: 15px;
+
+      }
+
+      p.card_author a {
+          color: #1B1C34;
+          font-style: italic;
+      }
+
+      p.card_author a:hover {
+          font-weight: bold;
+      }
+
+      .link {
+          position: fixed;
+          background-color: #D12322;
+          padding: 23px 40px;
+          right: -106px;
+          border-radius: 5px;
+          top: 50%;
+          transform: translateY(-50%);
+          transform: rotate(-90deg);
+          font-size: 18px;
+          font-weight: 500;
+          color: #FFF;
+          text-decoration: none;
+          text-transform: capitalize;
+          transition: all .1s ease-in-out;
+      }
+
+      .link i {
+          padding-left: 7px;
+      }
+
+      .link:hover {
+          text-decoration: underline;
+          background-color: black;
+      }
+
+      @media only screen and (max-width: 1441px) and (min-width: 1025px) {
+          .container {
+              max-width: 80%;
+          }
+
+          .grid {
+              gap: 2%;
+          }
+
+          .card {
+              padding: 15px;
+          }
+
+          .card_body {
+              padding: 15px;
+          }
+
+          .card_title {
+              font-size: 22px;
+              padding-bottom: 14px;
+          }
+
+          .card_body p {
+              font-size: 16px;
+          }
+
+          a.read_more {
+              padding: 19px 0;
+              width: 60%;
+              font-size: 11px;
+              margin-top: 30px;
+          }
+
+      }
+
+      @media only screen and (max-width: 1024px) {
+
+          .grid {
+              grid-template-columns: 1fr;
+              gap: 2%;
+          }
+      }
+
+      @media only screen and (max-width: 425px) {
+          .container {
+              max-width: 90%;
+          }
+
+          .card {
+              padding: 20px 10px;
+          }
+
+          .card_body {
+              padding: 7px;
+          }
+
+          .card_title {
+              font-size: 20px;
+              padding-bottom: 7px;
+          }
+
+          .card_body p {
+              font-size: 14px;
+          }
+
+          a.read_more {
+              padding: 15px 0;
+              margin-top: 20px;
+          }
+
+      }
+      
+      footer{
+          background:#19353f;
+          height: auto;
+          width: auto;
+          padding-top: 140px;
+          color: #FFF;
+        }
+
+        .footer-content{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .footer-content h3{
+          font-size: 1.8rem;
+          font-weight: 400;
+          text-transform: capitalize;
+          line-height: 3rem;
+        }
+
+        .footer-content p{
+          max-width: 500px;
+          margin: 10px auto;
+          line-height: 28px;
+          font-size: 14px;
+        }
+
+        .footer-bottom {
+          background: #112830;
+          width: auto;
+          padding: 20px 0;
+          text-align: center;
+        }
+
+        .footer-bottom p{
+          font-size: 14px;
+          word-spacing: 2px;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class = "menu-bar"> 
+<ul>
+  <li><a href="page_home.html"><i class="bi bi-house-door-fill" ></i>หน้าหลัก</a></li>
+  <li><a href="#"><i class="bi bi-globe-asia-australia"></i>ภาวะโลกร้อน</a>
+    <div class="sub-menu-global">
+      <ul>
+        <li><a href="page_intro.html">ภาวะโลกร้อนคืออะไร</a></li>
+        <li><a href="page_danger.html">ผลกระทบของภาวะโลกร้อน</a></li>
+        <li><a href="page_thai.html">ภาวะโลกร้อนในประเทศไทย</a></li>
+      </ul>
+    </div>
+  </li>
+
+  <li class = "active" ><a href=""><i class="bi bi-chat-heart-fill"></i>การรับมือ</a></li>
+  <li><a href="#static"><i class="bi bi-clipboard-data-fill"></i>สถานการณ์ปัจจุบัน</a></li>
+  <li><a href="#"><i class="bi bi-question-circle-fill"></i>เกี่ยวกับ</a>
+    <div class = "sub-menu-global">
+      <ul>
+        <li><a href="page_about.html">รายละเอียดโครงงาน</a></li>
+        <li><a href="page_credit.html">แหล่งที่มาข้อมูล</a></li>
+      </ul>
+    </div>
+  </li>
+</ul>
+</div>
+
+<article class="takecare">
+    <h1 class="takecare_header"> การรับมือกับภัยโลกร้อน</h1>
+    <center><img src="https://www.greenqueen.com.hk/wp-content/uploads/2020/04/planting-envanto-elements.jpg" height="40%" width="40%"></br> ภาพ: https://www.greenqueen.com.hk/10-things-you-can-do-to-help-save-the-earth/</center>
+    <p class="takecare_info1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;แม้ในปัจจุบัน โลกเราจะกำลังเผชิญกับภัยโลกร้อนและผลจากสิ่งที่เรากระทำลงไป หากแต่นั้นยังไม่ใช่จุดจบของพวกเรา เพราะในตอนนี้ได้มีทั้งโครงการต่างๆ จากทางภาครัฐ เอกชน ทั้งในและต่างประเทศ ที่ช่วยกันผลักดันแนวคิดและการปลูกฝังจิตสำนึกในการรักโลกของเรา โดยได้มีการโปรเมท ปรับใช้ และปรับปรุงทั้งด้านอุตสหากรรม การปล่อยสารพิษสู่แหล่งน้ำและอากาศ รวมถึงการใช้เทคโนโลยีใหม่ๆ เข้ามาช่วยอีกด้วย
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ถึงแม้การรักโลก อาจจะฟังดูเป็นสิ่งที่ทำยากเกินไป หากแต่นี้คือวิธีที่เราจะสามารถช่วยกันรักโลกได้แบบง่ายๆ ที่ไม่ว่าใครๆ ก็ทำกันได้ เริ่มต้นวันนี้ เพื่อโลกที่ดีกว่าในวันข้างหน้าอย่างยั่งยืน
+    </br></br><b>- ลดปริมาณการใช้พลังงานไฟฟ้า</b></p>
+
+    <center><img src="https://yourteenmag.com/wp-content/uploads/2018/07/Depositphotos_9053892_l-2015.jpg" height="20%" width="20%"></br> ภาพ: https://yourteenmag.com/family-life/communication/just-turn-off-the-lights</center>
+    <p class="takecare_info2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การผลิตไฟฟ้าและความร้อนส่วนใหญ่ใช้พลังงานจากทั้งถ่านหิน น้ำมัน และก๊าซต่างๆ การปิดไฟหลังจากออกจากห้อง การถอดปลั๊กออกจากเครื่องใช้ไฟฟ้าที่เราใช้แล้ว การเปิดแอร์แค่ 25 องศา การขึ้นลงบันไดแทนการใช้ลิฟต์ นอกจากจะเป็นการประหยัดพลังงานและค่าใช้จ่ายแล้ว ยังช่วยลดปริมาณก๊าซคาร์บอนไดออกไซด์และก๊าซพิษต่างๆ สู่ชั้นบรรยากาศได้นับพันปอนด์ต่อปีเลยทีเดียว
+    </br></br><b>- ลดปริมาณเนื้อสัตว์ ทานผักให้มากขึ้น</b></p>
+
+    <center><img src="https://www.mooringspark.org/hubfs/bigstock-Asian-Senior-Or-Elderly-Old-La-375883243.jpg" height="20%" width="20%"></br> ภาพ: https://www.mooringspark.org/news/5-health-benefits-of-eating-vegetables</center>
+    <p class="takecare_info3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การทำปศุสัตว์ขนาดใหญ่ จำเป็นต้องใช้เนื้อที่ในการทำถึง 2 ใน 3 ของการทำการเกษตรทั้งหมด เมื่อจำเป็นต้องใช้พื้นที่มากจึงทำให้เกิดการเผาทำลายป่าเพื่อนำพื้นที่ดังกล่าวมาเลี้ยงสัตว์ จนทำให้เกิดก๊าซเรือนกระจก นอกจากนี้การทำปศุสัตว์ยังก่อให้เกิดก๊าซมีเทนจำนวนมหาศาล ซึ่งทั้งหมดล้วนเป็นสาเหตุของโลกร้อน โดยทั่วไปกระบวนการผลิตอาหารที่มาจากพืชจะสร้างก๊าซเรือนกระจกน้อยกว่า อีกทั้งยังใช้พลังงาน ที่ดิน และน้ำน้อยกว่า เพราะฉะนั้นหันมาทานผักให้มากขึ้นกันเถอะ
+    </br></br><b>- ใช้ยานพาหนะส่วนตัวให้น้อยลง หันมาใช้ระบบขนส่งสาธารณะ</b></p>
+
+    <center><img src="https://d13jio720g7qcs.cloudfront.net/images/guides/origin/5fb88a2c9af81.jpg" height="20%" width="20%"></br> ภาพ: https://www.bestpricetravel.com/travel-guide/all-you-need-to-know-about-public-transport-in-thailand-2219.html</center>
+    <p class="takecare_info4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ยานพาหนะ ไม่ว่าจะเป็นรถยนต์ หรือรถจักรยานยนต์ จะปล่อยก๊าซคาร์บอนมอนอกไซด์ และก๊าซเรือนกระจกอื่น ๆ เป็นจำนวนมากส่งผลต่อชั้นบรรยากาศจนเกิดภาวะโลกร้อน หันไปใช้รถโดยสารสาธารณะแทนรถส่วนตัวกันดีกว่า หากจะไปข้างนอกควรไปพร้อม ๆ กันหลายคน หรือหากต้องเดินทางไม่ไกลอย่างหน้าปากซอย ลองเปลี่ยนบรรยาากศมาเดินหรือปั่นจักรแทนก็ไม่แย่อะไร อีกทั้งยังส่งเสริมให้สุขภาพเราแข็งแรงขึ้นอีกด้วย
+    </br></br><b>- ปฏิเสธพลาสติก หวนคืนสู่ธรรมชาติ</b></p>
+
+    <center><img src="https://media.istockphoto.com/id/495951694/photo/shopping-background.jpg?s=612x612&w=0&k=20&c=XDAiFfUTsiiwAfkwG5Lf-bMYXv9bNjHllznOy3PNk4A=" height="20%" width="20%"></br> ภาพ: https://www.istockphoto.com/th/image/carrying-grocery-bag</center>
+    <p class="takecare_info5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ถุงพลาสติกเพียง 1 ใบใช้เวลาการย่อยสลายกว่า 450 ปี ข้อมูลจากกรมควบคุมมลพิษระบุว่าแต่ละปีมีขยะพลาสติกและโฟมมากถึง 2.7 ล้านตัน หรือเฉลี่ย 7,000 ตันต่อวัน กว่า 80 เปอร์เซ็นต์เป็นพลาสติก ซึ่งหากต้องกำจัดด้วยการเผา ก็จะยิ่งเพิ่มก๊าซเรือนกระจก ลดปริมาณอากาศบริสุทธิ์ให้แย่ลงและยังส่งผลกระทบต่อระบบนิเวศในระยะยาวอีกด้วย ลดปริมาณการใช้พลาสติก คุณก็สามารถช่วยโลกคุณได้มากแล้ว
+
+
+</article>
+
+<div class="home-picture-static">
+  <div class="col-md-5 p-lg-5 mx-auto my-5">
+    <h1 id = "static" class="home-header">สถานการณ์โลกร้อนปัจจุบัน</h1>
+  </div>
+</div>
+
+<div class="containerer">
+  <div class="grid">
+      <div class="card">
+          <div class="card_img">
+              <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/445F/production/_119330571_gettyimages-1229925855.jpg" alt="">
+          </div>
+          <div class="card_body">
+              <h2 class="card_title">ภาวะโลกร้อนเปลี่ยนแปลงสภาพป่าไม้</br>ของแคนนาดาไปมากขนาดไหน?</h2>
+              <p>เมื่อวันที่ 3 กรกฎาคม 2022 ที่ผ่านมา ได้เกิดเหตุไฟป่าบริเวณตะวันตกของประเทศแคนนาดา ผู้เชี่ยวชาญชี้ว่าการเปลี่ยนแปลงสภาพภูมิอากาศเป็นสาเหตุให้เกิดไฟป่าในช่วงต้นและช่วงที่อากาศร้อนจัด ส่งผลให้มีก๊าซเผาไหม้ถูกปล่อยสู่ชั้นบรรยากาศเป็นจำนวนมาก และยังมีผู้เสียชีวิตจากเหตุการณ์ดังกล่าวอีกด้วย </p>
+              <p class="card_author">ขอขอบคุณข้อมูลจาก <a href="https://blog.resolutefp.com/2017/07/climate-change-affecting-canadas-forests/" target="_blank" class="author_link">The Resolute Blog</a></p>
+          </div>
+      </div>
+      <div class="card">
+          <div class="card_img">
+              <img src="https://www.innovationnewsnetwork.com/wp-content/uploads/2021/07/iStock-Revolu7ion93-696x392.jpg" alt="">
+          </div>
+          <div class="card_body">
+              <h2 class="card_title">พายุแถบยุโรปทวีความรุนแรงขึ้นทุกปี</br>จากภาวะโลกร้อน</h2>
+              <p>จากการศึกษาและสำรวจของมหาวิทยาลัยนิวคาสเซิล สหราชอาณาจักร และทีมวิจัยเดอะเมท ออฟฟิส พบว่า ความถี่ในการเกิดพายุในประเทศแถบยุโรปและใกล้เคียงเกิดขึ้นอย่างต่อเนื่องและทวีความรุนแรงขึ้นเรื่อยๆ จากการเปลี่ยนแปลงทางสภาพอากาศในช่วงหลายปีมานี้</p>
+              <p class="card_author">ขอขอบคุณข้อมูลจาก <a href="https://www.innovationnewsnetwork.com/european-storms-exacerbated-by-the-effects-of-climate-change/13292/" target="_blank" class="author_link">สำนักข่าว Innovasion Newsnetwork</a></p>
+          </div>
+      </div>
+      <div class="card">
+          <div class="card_img">
+              <img src="https://www.thaifrx.com/wp-content/uploads/2022/08/220829170402-greenland-icebergs-file-063022-super-tease.jpg" alt="">
+          </div>
+          <div class="card_body">
+              <h2 class="card_title">ระดับน้ำทะเลมีความสูงขึ้นอย่างมาก </br>ผู้คนนับร้อยล้านอาจไร้ถิ่นที่อยู่</h2>
+              <p>ระดับน้ำทะเลของโลกสูงขึ้นทุกๆ ปี นับตั้งแต่หมดยุคน้ำแข็งเมื่อ 18,000 ปีที่ผ่านมา อุณหภูมิที่มากขึ้นของโลกค่อยๆ ส่งผลให้โลกมีระดับน้ำที่สูงขึ้น ทั้งแผ่นน้ำแข็งขั้วโลกที่ละลายจากการเปลี่ยนแปลงของอุณหภูมิในช่วงศวรรตที่ผ่านมา ประเทศแถบชายฝั่งทะเลและประเทศที่อยู่ระดับต่ำกว่าน้ำทะเลจะได้รับผลกระทบมากที่สุด</p>
+              <p class="card_author">ขอขอบคุณข้อมูลจาก <a href="http://www.climate.tmd.go.th/content/article/20" target="_blank" class="author_link">กรมอุตุนิยมวิทยา</a></p>
+          </div>
+      </div>
+      <div class="card">
+        <div class="card_img">
+            <img src="https://i0.wp.com/eos.org/wp-content/uploads/2021/12/petm-fish-warming.jpg?fit=1200%2C675&ssl=1" alt="">
+        </div>
+        <div class="card_body">
+            <h2 class="card_title">ปลากว่าร้อยสายพันธุ์อพยพขึ้นทางเหนือ</br>เพื่อหนีการเปลี่ยนแปลงของสภาพอากาศ</h2>
+            <p>ชาวประมงอังกฤษและทั่วโลกต่างได้รายงานถึงผลกระทบของภาวะโลกร้อนที่ส่งผลต่อการล่าปลาที่ผันผวน เพราะปลาและหอยหลายชนิดที่เคยหาได้ ต่างอพยพเพื่อหนีการเปลี่ยนแปลงทางสภาพอากาศที่พวกมันไม่คุ้นเคย ส่งผลต่อทั้งเศรษฐกิจและระบบนิเวศดั้งเดิมของพวกมันเป็นอย่างมาก</p>
+            <p class="card_author">ขอขอบคุณข้อมูลจาก <a href="https://www.independent.co.uk/climate-change/news/fish-migrate-climate-change-north-seafood-fishermen-cod-sea-bass-king-crab-a8354861.html" target="_blank" class="author_link">สำนักข่าว Independent </a></p>
+        </div>
+    </div>
+    <div class="card">
+      <div class="card_img">
+          <img src="https://media.cnn.com/api/v1/images/stellar/prod/230221094230-01-venice-low-tide-021623-restricted.jpg?c=original" alt="">
+      </div>
+      <div class="card_body">
+          <h2 class="card_title">ภัยแล้งทำพิษคลองเวนิชระดับน้ำต่ำ</h2>
+          <p>ภาพคลองในเวนิสแห้งเหือดในปีนี้บ่งบอกถึงสัญญาณว่าอิตาลีอาจจะต้องเจอภัยแล้งอย่างหนัก ทั้งนี้นอกจากคลื่นความร้อนเมื่อช่วงต้นปีที่ส่งผลกระทบแล้ว อิตาลียังประสบภาวะแล้งเป็นระยะเวลานานตั้งแต่ช่วงฤดูร้อนในปี 2022 ซึ่งเป็นผลจากเกิดหิมะบนเทือกเขาแอลป์น้อยเกินไปตามข้อมูลของผู้เชี่ยวชาญด้านสิ่งแวดล้อม</p>
+          <p class="card_author">ขอขอบคุณข้อมูลจาก <a href="https://www.greenpeace.org/thailand/story/26510/climate-venice-drought/" target="_blank" class="author_link">Greenpeace Thailand</a></p>
+      </div>
+  </div>
+  <div class="card">
+    <div class="card_img">
+        <img src="https://media.npr.org/assets/img/2022/03/25/gettyimages-1204403352_custom-b57f1586125913ba175169785d6459210a281ca7-s1100-c50.jpg" alt="">
+    </div>
+    <div class="card_body">
+        <h2 class="card_title">โลกร้อนกระทบแนวปะการังฟอกขาว 3 ปีซ้อน</h2>
+        <p>นักวิทยาศาสตร์ ชี้ปีนี้ทั่วโลกเผชิญปัญหาปะการังฟอกขาวคิดเป็นร้อยละ 33 ของแนวปะการังทั่วโลก แนวโน้มจะรุนแรงและถี่มากขึ้น หลังการเปลี่ยนแปลงของสภาพภูมิอากาศ ทำให้อุณหภูมิน้ำทะเลสูงขึ้น หากปะการังทั่วโลกสูญพันธุ์กระทบชีวิตมนุษย์และสัตว์ที่เหลืออยู่</p>
+        <p class="card_author">ขอขอบคุณข้อมูลจาก <a href="https://www.thaipbs.or.th/news/content/280320" target="_blank" class="author_link">สำนักข่าว Thai PBS</a></p>
+    </div>
+</div>
+  </div>
+</div>
+
+  <footer>
+    <div class="footer-content">
+      <h3>Global Warming เปลี่ยนโลกร้อน เป็นโลกรัก</h3>
+      <p>เว็บไซต์เพื่อการเรียนรู้จากโครงงาน "เว็บหรรษา พารักโลก" </br> วิชาเทคโนโลยีสีเขียว 03600012 หมู่ 1 </p>
+    </div>
+
+    <div class="footer-bottom">
+      <p>ออกแบบและสร้างเว็บโดยพวกเรากลุ่ม Big_juan</p>
+    </div>
+  </footer>
+
+    <script src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

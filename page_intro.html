@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="picture/logot.png">
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <!-- Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;500&display=swap" rel="stylesheet">
+
+    <title>Global Warming เปลี่ยนโลก "ร้อน" เป็นโลก "รัก"</title>
+
+    <link rel ="stylesheet" href="/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body{
+        font-family: 'Kanit', sans-serif;
+        background-color:(black);
+        background-size: cover;
+        background-position: center;
+      }
+
+      .menu-bar{
+        background: #2c5462;
+        text-align: center;
+      }
+
+      .menu-bar ul{
+        display: inline-flex;
+        list-style: none;
+        color: #ffff;
+      }
+
+      .menu-bar ul li{
+        width: 200px;
+        margin: 15px;
+        padding: 15px;
+      }
+
+      .menu-bar ul li a{
+        text-decoration: none;
+        color: #ffff;
+      }
+
+      .active, .menu-bar ul li:hover{
+        background: #60868f;
+        border-radius: 4px;
+        transition: all 0.25s ease;
+      }
+
+      .menu-bar .bi{
+        margin-right: 12px;
+      }
+
+      .sub-menu-global{
+        display: none;
+      }
+
+      .menu-bar ul li:hover .sub-menu-global{
+        display: block;
+        position: absolute;
+        background: #2c5462;
+        margin-top: 15px;
+        margin-left: -15px;
+      }
+
+      .menu-bar ul li:hover .sub-menu-global ul{
+        display: block;
+        margin: 10px;
+
+      }
+
+      .menu-bar ul li:hover .sub-menu-global ul li{
+        width: 200px;
+        padding: 10px;
+        border-bottom: 2px dotted #ffff;
+        background: transparent;
+        border-radius: 0;
+        text-align: left;
+
+      }
+
+      .menu-bar ul li:hover .sub-menu-global ul li:last-child{
+        border-bottom: none;
+      }
+
+      .menu-bar ul li:hover .sub-menu-global ul li a:hover{
+        color:#f2cd93;
+      }
+
+      .article-intro{
+        width: 1200px;
+        height: 300px;
+        text-align: left;
+        margin: 0 auto;
+      }
+
+      .intro_header{
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .intro_info1{
+        width: 1000px;
+        height: 600px;
+        text-align: left;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 22px;
+        padding-top: 40px;
+      }
+
+      .intro_info2{
+        width: 1000px;
+        height: 2050px;
+        text-align: left;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 22px;
+        padding-top: 40px;
+      }
+
+      .intro_info3{
+        width: 1000px;
+        height: 800px;
+        text-align: left;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 22px;
+        padding-top: 40px;
+      }
+
+      .home-picture-static{
+        text-align: center;
+        background-color: #69868f;
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 60px 80px;
+      }
+
+      .home-header{
+        color: #ffff;
+        text-shadow: 4px 2.5px #333333;
+      }
+
+      .bodydy {
+          align-items: center;
+          background-color: #F3F5F7;
+          font-family: 'Poppins',
+              sans-serif;
+          width: 100%;
+          min-height: 100vh;
+          color: #1B1C34;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+
+
+      .containery {
+          max-width: 70%;
+          margin: 0 auto;
+          height: 100%;
+      }
+
+      .grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 3%;
+          margin: 5% 0;
+      }
+
+      .card {
+          overflow: hidden;
+          padding: 20px;
+          background-color: #FFF;
+          border-radius: 30px;
+          text-align: center;
+      }
+
+
+      .card_img img {
+          width: 100%;
+          height: auto;
+          border-radius: 20px;
+      }
+
+      .card_body {
+          padding: 26px 20px 36px 20px;
+      }
+
+      .card_title {
+          font-family: 'Kanit', sans-serif;
+          font-weight: 700;
+          text-transform: capitalize;
+
+          font-size: 28px;
+          padding-bottom: 20px;
+      }
+
+      .card_body p {
+          text-align: left;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 1.7;
+
+      }
+
+      p.card_author {
+          text-align: center;
+          font-size: 15px;
+          padding-top: 15px;
+
+      }
+
+      p.card_author a {
+          color: #1B1C34;
+          font-style: italic;
+      }
+
+      p.card_author a:hover {
+          font-weight: bold;
+      }
+
+      .link {
+          position: fixed;
+          background-color: #D12322;
+          padding: 23px 40px;
+          right: -106px;
+          border-radius: 5px;
+          top: 50%;
+          transform: translateY(-50%);
+          transform: rotate(-90deg);
+          font-size: 18px;
+          font-weight: 500;
+          color: #FFF;
+          text-decoration: none;
+          text-transform: capitalize;
+          transition: all .1s ease-in-out;
+      }
+
+      .link i {
+          padding-left: 7px;
+      }
+
+      .link:hover {
+          text-decoration: underline;
+          background-color: black;
+      }
+
+      @media only screen and (max-width: 1441px) and (min-width: 1025px) {
+          .container {
+              max-width: 80%;
+          }
+
+          .grid {
+              gap: 2%;
+          }
+
+          .card {
+              padding: 15px;
+          }
+
+          .card_body {
+              padding: 15px;
+          }
+
+          .card_title {
+              font-size: 22px;
+              padding-bottom: 14px;
+          }
+
+          .card_body p {
+              font-size: 16px;
+          }
+
+          a.read_more {
+              padding: 19px 0;
+              width: 60%;
+              font-size: 11px;
+              margin-top: 30px;
+          }
+
+      }
+
+      @media only screen and (max-width: 1024px) {
+
+          .grid {
+              grid-template-columns: 1fr;
+              gap: 2%;
+          }
+      }
+
+      @media only screen and (max-width: 425px) {
+          .container {
+              max-width: 90%;
+          }
+
+          .card {
+              padding: 20px 10px;
+          }
+
+          .card_body {
+              padding: 7px;
+          }
+
+          .card_title {
+              font-size: 20px;
+              padding-bottom: 7px;
+          }
+
+          .card_body p {
+              font-size: 14px;
+          }
+
+          a.read_more {
+              padding: 15px 0;
+              margin-top: 20px;
+          }
+
+      }
+      
+      footer{
+          background:#19353f;
+          height: auto;
+          width: auto;
+          padding-top: 140px;
+          color: #FFF;
+        }
+
+        .footer-content{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .footer-content h3{
+          font-size: 1.8rem;
+          font-weight: 400;
+          text-transform: capitalize;
+          line-height: 3rem;
+        }
+
+        .footer-content p{
+          max-width: 500px;
+          margin: 10px auto;
+          line-height: 28px;
+          font-size: 14px;
+        }
+
+        .footer-bottom {
+          background: #112830;
+          width: auto;
+          padding: 20px 0;
+          text-align: center;
+        }
+
+        .footer-bottom p{
+          font-size: 14px;
+          word-spacing: 2px;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class = "menu-bar"> 
+<ul>
+  <li><a href="page_home.html"><i class="bi bi-house-door-fill" ></i>หน้าหลัก</a></li>
+  <li class = "active" ><a href="#"><i class="bi bi-globe-asia-australia"></i>ภาวะโลกร้อน</a>
+    <div class="sub-menu-global">
+      <ul>
+        <li><a href="#">ภาวะโลกร้อนคืออะไร</a></li>
+        <li><a href="page_danger.html">ผลกระทบของภาวะโลกร้อน</a></li>
+        <li><a href="page_thai.html">ภาวะโลกร้อนในประเทศไทย</a></li>
+      </ul>
+    </div>
+  </li>
+
+  <li><a href="page_takecare.html"><i class="bi bi-chat-heart-fill"></i>การรับมือ</a></li>
+  <li><a href="#static"><i class="bi bi-clipboard-data-fill"></i>สถานการณ์ปัจจุบัน</a></li>
+  <li><a href="#"><i class="bi bi-question-circle-fill"></i>เกี่ยวกับ</a>
+    <div class = "sub-menu-global">
+      <ul>
+        <li><a href="page_about.html">รายละเอียดโครงงาน</a></li>
+        <li><a href="page_credit.html">แหล่งที่มาข้อมูล</a></li>
+      </ul>
+    </div>
+  </li>
+</ul>
+</div>
+
+<article class="intro">
+    <h1 class="intro_header"> "ภาวะโลกร้อน (Global Warming)" คืออะไร? </h1>
+    <center><img src="https://d31nhj1t453igc.cloudfront.net/cloudinary/2021/Dec/27/gZp0NfiYTsLdXlVoh0Kz.jpg" height="40%" width="40%"></br> ภาพ: https://lens.monash.edu/@science/2021/10/21/1383952/the-scientific-consensus-on-climate-change-gets-even-stronger </center>
+    <p class="intro_info1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u><b>ภาวะโลกร้อน หรือ Global Warming</b></u>  คือการที่อุณหภูมิเฉลี่ยของโลกเพิ่มขึ้นอย่างรวดเร็วและฉับพลันทำให้โลกไม่สามารถระบายความร้อนที่ได้รับจากรังสีดวงอาทิตย์ได้อย่างปกติ ทำให้โลกมีอุณหภูมิสูงขึ้น และทำให้สภาพอากาศของโลกเปลี่ยนไป เช่น ภัยแล้งที่ยาวนาน ฤดูกาลที่ผิดเพี้ยน พายุที่รุนแรง ระดับน้ำทะเลที่สูงขึ้น ส่งผลกระทบต่อพวกเราและสิ่งมีชีวิตทั้งหลายบนโลกอย่างหลีกเลี่ยงไม่ได้
+    </br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สาเหตุและปัจจัยที่ส่งผลกระทบต่อการเปลี่ยนแปลงครั้งนี้มีหลักๆ อยู่ 2 ปัจจัยคือ ปัจจัยภายนอก เช่น พลังงานความร้อนจากดวงอาทิตย์ วงโครจรของโลกที่เปลี่ยนไป และปัจจัยภายใน เช่น การเปลี่ยนแปลงของเปลือกโลก ระดับน้ำทะเลในมหาสมุทร แผ่นน้ำแข็งขั้วโลก และองค์ประกอบของชั้นบรรยากาศ
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ซึ่งปัจจัยภายในที่มีผลมากที่สุดในตอนนี้คือ พฤติกรรมต่างๆ ของมนุษย์ที่ค่อยๆ ก่อให้เกิดการเปลี่ยนแปลง ส่งผลให้เกิด<u>ภาวะเรือนกระจก (Greenhouse Effect)</u> ทำให้โลกไม่สามารถปกป้องเราจากพลังงานความร้อนที่มากมายของดวงอาทิตย์ได้ไหว และยังเป็นโดมครอบไม่ให้โลกสะท้อนความร้อนกลับออกไป ทำให้รังศีจากดวงอาทิตย์ยังคงไหลเวียนอยู่ในโลกต่อไป ส่งผลให้โลกมีอุณหภูมิสูงขึ้น
+    </br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;กิจกรรมของมนุษย์ที่ส่งผลให้เกิดภาวะเรือนกระจกมีดังต่อไปนี้
+    </br></br><b>1. การปล่อยก๊าซพิษขึ้นสู่ชั้นบรรยากาศ</b></p>
+
+    <center><img src="https://wp.airly.org/wp-content/uploads/2022/05/ella-ivanescu-JbfhNrpQ_dw-unsplash-2.jpg" height="40%" width="40%"></br> ภาพ: https://airly.org/en/how-does-air-pollution-affect-global-warming/ </center>
+    <p class="intro_info2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;โลกในยุคสมัยใหม่ได้มีการนำเทคโนโลยีต่างๆ เข้ามาจัดการเพื่อให้ชีวิตเราง่ายขึ้น อุตสาหกรรมน้อยใหญ่ที่ไม่จำเป็นต้องมีมนุษย์ทำงานอยู่ข้างใน การคมนาคมที่สะดวก รวดเร็ว และมีประสิทธิภาพ หากแต่ไม่ได้มีเพียงข้อดีเสมอไป เพราะพฤติกรรมเหล่านี้เองต่างก็ค่อยๆ ปล่อยมลพิษทางอากาศมากขึ้นเรื่อยๆ ทั้งการปล่อยควันเสียจากการเผาไหม้ของเชื้อเพลิงต่างๆ ในการขนส่ง การปล่อยก๊าซพิษขึ้นสู่ชั้นบรรยากาศของโรงงานอุตสาหกรรม
+    </br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;โดยก๊าซพิษสำคัญที่เป็นตัวการในการเกิดภาวะเรือนกระจกมีด้วยกัน 6 ชนิดคือ
+    </br></br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ก๊าซคาร์บอนไดออกไซด์ (Carbondioxia : CO2)</b>
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;คาร์บอนไดออกไซด์ (CO2) เป็นก๊าซไม่มีสี ไม่มีกลิ่น ซึ่งเกิดจากอะตอมของคาร์บอนและออกซิเจน ก๊าซที่พบมากที่สุดอันดับสี่ที่พบในบรรยากาศของโลกถัดจากไนโตรเจน ออกซิเจน และอาร์กอน คาร์บอนไดออกไซด์อาจเป็นของเหลวหรือของแข็งก็ได้ ในรูปของแข็ง CO2 เรียกว่าน้ำแข็งแห้ง คาร์บอนไดออกไซด์เป็นส่วนหนึ่งของวัฏจักรคาร์บอนของโลก ซึ่งเป็นการหมุนเวียนของคาร์บอนระหว่างชั้นบรรยากาศ พืช สัตว์ ดิน และมหาสมุทร มนุษย์ สัตว์ เชื้อรา และจุลินทรีย์ผลิต CO 2 และพืชดูดซับ 
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ก๊าซคาร์บอนไดออกไซด์ที่มนุษย์สร้างขึ้นนั้นส่วนใหญ่เกิดจากการเผาเชื้อเพลิงฟอสซิล เช่น น้ำมัน ถ่านหิน และ ก๊าซธรรมชาติ แหล่งที่มาหลักของการปล่อยมลพิษทั่วโลก ได้แก่ การขนส่ง อุตสาหกรรม และการเผาไหม้เชื้อเพลิงสำหรับไฟฟ้าและความร้อนคาร์บอนไดออกไซด์ยังถูกผลิตขึ้นจากแหล่งธรรมชาติ เช่น สัตว์ ภูเขาไฟ มหาสมุทร ดิน และพืชที่เน่าเปื่อย
+
+    </br></br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ก๊าซมีเทน (Methane : CH4)</b>
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;มีเทน (Ch4) เป็นก๊าซไวไฟที่ไม่มีสี ไม่มีกลิ่น เบากว่าอากาศ จะลอยตัวได้ง่าย สะสมในที่สูงๆและในพื้นที่ปิด สะสมได้ดีหากอากาศร้อนและมีความชื้นสูง การตรวจวัดความเข้มข้นในบรรยากาศค่อนข้างยากที่จะตรวจพบได้ หากไม่ใช้ เครื่องตรวจจับก๊าซ (Gas detector) อีกประการหนึ่ง มีเทนจะเบากว่าอากาศสักครึ่งหนึ่ง ดังนั้นเมื่อเจอช่องว่างที่ไหน จะพุ่งออกมาจากภาชนะที่ขังไว้ทันที ดังนั้นเวลาไปเปิดบ่อบำบัดน้ำเสีย แล้วยืนมองอยู่ข้างบนโดยไม่ลงไปข้างล่าง ก็ไม่ได้หมายความว่าจะปลอดภัย นอกจากนั้นก๊าซมีเทนสามารถแทนที่ก๊าซออกซิเจน และทำให้เกิดการระเบิดที่ความเข้มข้น 50,000 ส่วนในล้านส่วน หรือ มากกว่า 5 % ในบรรยากาศ ก็เพียงพอที่จะจุดระเบิดได้ แหล่งกำเนิดของก๊าซมีเทน คือ ข้าวที่หมักชื้น บ่อบำบัดน้ำเสีย จากการหมักของโดยแบคทีเรียแบบไร้อากาศ พื้นที่บำบัดขยะ เป็นต้น
+
+    </br></br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ก๊าซไนตรัสออกไซด์ (Nitrous oxide : N2O)</b>
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ไนตรัสออกไซด์ (N2O) เป็นแก๊สไม่มีสี มีกลิ่นและรสหอมหวานอ่อนๆ ละลายน้ำได้เล็กน้อย ละลายได้ดีในแอลกอฮอล์และไขมัน ไม่ติดไฟ ในการขนส่งอาจถูกทำให้อยู่ในรูปของเหลวที่อุณหภูมิต่ำ (Liquefied compressed gas) โดยแก๊สไนตรัสออกไซด์นั้นเกิดขึ้นเองตามธรรมชาติ และจากการใช้ปุ๋ยไนเตรดในไร่นา การขยายพื้นที่เพาะปลูก การเผาไหม้ เผาหญ้า มูลสัตว์ที่ย่อยสลาย และเชื้อเพลิงถ่านหินจากอุตสาหกรรมที่ใช้กรดไนตริกในขบวนการผลิต เช่น อุตสาหกรรมผลิตเส้นใยไนลอน อุตสาหกรรมเคมี หรืออุตสาหกรรมพลาสติกบางชนิด
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ไนตรัสออกไซด์รู้จักกันดีในชื่อ “แก๊สหัวเราะ” มีกลิ่นหอมหวานอ่อนๆ ส่วนมากรับสัมผัสทางการหายใจ มีผลต่อระบบประสาทโดยในระดับความเข้มข้นต่ำๆ จะทำให้เคลิบเคลิ้ม ในระดับความเข้มข้นสูงจะทำให้มีอาการชาและหมดสติได้ แก๊สชนิดนี้ใช้เป็นยาสลบและระงับปวดทางการแพทย์ ใช้ในกิจกรรมสันทนาการ แม้ว่าจะไม่ติดไฟ แต่เป็นสารออกซิไดซ์ (Oxidizer) ที่ดี จึงใช้ในการสันดาปภายในเครื่องยนต์ที่ต้องการกำลังสูง เช่น จรวด รถแข่ง 
+    
+    
+    </br></br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ก๊าซไฮโดรฟลูออโรคาร์บอน (Hydrofluoro carbons : HFCs)</b>
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ไฮโดรฟลูออโรคาร์บอน (HFCs) เป็นก๊าซที่มนุษย์สังเคราะห์ขึ้น ใช้ในระบบทำความเย็นต่าง ๆ และเป็นสารที่ถูกนำมาใช้แทนก๊าซคลอโรฟลูออโรคาร์บอน (CFCs) ซึ่งเป็นสารที่ใช้อยู่ในเครื่องปรับอากาศ ตู้เย็น สเปรย์ และน้ำยาดับเพลิง มีศักยภาพในการกักเก็บความร้อนที่สูงมาก และทำให้เกิดภาวะเรือนกระจกได้มากกว่าก๊าซคาร์บอนไดออกไซด์ ประมาณ 124 ถึง 14,800 เท่า
+
+    </br></br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ก๊าชคลอโรฟลูออโรคาร์บอน (Chlorofluoro carbons : CFCs)</b>
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;คลอโรฟลูออโรคาร์บอน (CFCs) เป็นก๊าซที่มนุษย์ประดิษฐ์ขึ้นมา ก๊าซเหล่านี้ไม่ได้เกิดขึ้นในอากาศตามธรรมชาติ CFCs คือมลพิษในอากาศที่เป็นเคมี เมื่อก๊าซเหล่านี้ขึ้นไปถึงชั้นโอโซนสูงในบรรยากาศของเราจะทำลายโอโซนนั้น เมื่อ CFCs เข้าสู่บรรยากาศ จะทำลายออกซิเจนที่ก่อให้เกิดชั้นโอโซน ทำให้โอโซนถูกทำลาย บรรยากาศชั้นโอโซนก็ลดลง ทำให้รังสีอุตราไวโอเล็ตสามารถส่งมาถึงพื้นโลกได้โดยผ่านช่องต่าง ๆ ในชั้นโอโซน หลายปีที่ผ่านมาเราใช้ CFCs ในกระป๋องสเปรย์เพื่อสูบเอาของเหลวออกมาในรูปของละอองหรือหมอกบางๆก๊าซนี้ไม่ส่งผลกระทบต่อของเหลวที่อยู่ในกระป๋องแต่อย่างใด มีหลายประเทศรวมทั้งสหรัฐฯ ที่ไม่ใช้ CFCs ในกระป๋องสเปรย์อีกแล้ว และมีหลายประเทศที่กำลังจะเลิกใช้ นอกจากนี้ยังมีแหล่งที่มาอื่น ๆ ของ CFCs อีกซึ่งทำให้เกิดอันตรายต่อชั้นโอโซน
+
+    </br></br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ซัลเฟอร์เฮกซะฟลูออไรด์ (Sulfur hexafluoride : SF6)</b>
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ซัลเฟอร์เฮกซะฟลูออไรด์ (SF6) เป็นก๊าซที่เกิดจากมนุษย์ มีคุณสมบัติไม่ละลายในน้ำ แต่ละลายในตัวทำละลาย นิยมใช้ประโยชน์ในอุตสาหกรรมอิเล็กทรอนิกส์  นำมาใช้เพื่อเป็นฉนวนไฟฟ้าป้องกันการเกิดประกายไฟจากอุปกรณ์สวิทช์ไฟฟ้าแรงสูง หรือช่วยในการระบายความร้อนจากอุปกรณ์ไฟฟ้าแรงสูง เช่น สวิตช์เกียร์ ซึ่ง SF6 สามารถส่งผลกระทบทำให้เกิดภาวะเรือนกระจกได้มากกว่าก๊าซคาร์บอนไดออกไซด์ ถึง 22,800 เท่า
+    </br></br><b>2. การตัดไม้ทำลายป่า</b></p>
+
+    <center><img src="https://treejourney.com/wp-content/uploads/2022/02/93011152_m.jpg" height="40%" width="40%"></br> ภาพ: https://treejourney.com/reasons-why-people-cut-down-trees-deforestation-guide/ </center>
+    <p class="intro_info3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ป่าไม้ เปรียบเสมือนหลังคาที่คอยบดบังแสงแดดจกาดวงอาทิตย์ และยังเป็นปอดที่คอยฟอกอากาศบริสุทธิ์ให้เราสูดดมอยู่ในทุกๆ วัน หรือแม้แต่เป็นถิ่นที่อยู่อาศัยของสัตว์น้อยใหญ่ตามธรรมชาติ นับได้ว่าฝืนป่าคือสัญลักษณ์แห่งชีวิตและความร่มรื่นของโลกเลยก็ว่าได้
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ทรัพยากรป่าไม้จึงมีความสำคัญต่อการดำรงอยู่ของโลกใบนี้เป็นอย่างมาก ป่าไม้มีประโยชน์มากมายต่อการดำรชีวิตของมนุษย์ทั้งทางตรง เช่นนำมาสร้างอาคารบ้านเรือนและผลิตภัณฑ์ต่าง ๆ ใช้เป็นอาหาร ใช้เส้นใยที่ได้มาถักทอเป็นเครื่องนุ่งห่ม เชือก หรือแม้แต่ใช้ทำยารักษาโรคต่าง ๆ และมีประโยชน์ทางอ้อม เช่น เป็นแหล่งกำเนิดต้นน้ำลำธาร ทำให้เกิดความชุมชื้นและควบคุมสภาวะอากาศ เป็นแหล่งพักผ่อนและศึกษาหาความรู้ ป้องกันการกัดเซาะและพัดพาหน้าดิน ช่วยบรรเท่าความรุนแรงของลมพายุและป้องกันอุทกภัย และยังช่วยดูดซับมลพิษทางอากาศอีกด้วย
+
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การตัดไม้โดยไม่ปลูกทดแทนด้วยจำนวนที่เพียงพอ ก่อให้เกิดความเสียหายต่อที่อยู่อาศัย ต่อความหลากหลายทางชีวภาพ และปัญหาความแห้งแล้ง ซึ่งส่งผลเสียต่อการกักเก็บก๊าซคาร์บอนไดออกไซด์ในบรรยากาศโดยพืช บริเวณที่ป่าถูกทำลายโดยมากจะเกิดความเสียหายจากการพังทลายของหน้าดิน และพื้นที่มักจะด้อยคุณภาพลงจนกลายเป็นที่ดินที่ทำประโยชน์มิได้ ปัจจัยบางประการที่ทำให้เกิดการตัดไม้ทำลายป่าในระดับมหภาคคือ การเพิ่มประชากรที่มากเกินไป การพัฒนาให้กลายเป็นเมือง ความไม่เอาใจใส่หรือความไม่รู้คุณค่าที่แท้จริง ขาดการให้คุณค่า การจัดการป่าไม้ที่ไม่เข้มงวด และกฎหมายสิ่งแวดล้อมที่บกพร่อง ในหลายประเทศ การตัดไม้ทำลายป่าเป็นปัญหาต่อเนื่อง ซึ่งนำไปสู่การสูญพันธุ์ การเปลี่ยนแปลงของสภาพอากาศ การกลายสภาพเป็นทะเลทราย และการย้ายถิ่นฐานของคนพื้นเมือง ในกลุ่มประเทศที่มีผลิตภัณฑ์มวลรวมภายในประเทศต่อประชากรต่ำสุดที่ 4,600 ดอลลาร์สหรัฐฯ มีการจัดการไม่ให้อัตราสุทธิของการตัดไม้ทำลายป่าเพิ่มสูงขึ้น
+    </p>
+    
+
+</article>
+
+<div class="home-picture-static">
+  <div class="col-md-5 p-lg-5 mx-auto my-5">
+    <h1 id = "static" class="home-header">สถานการณ์โลกร้อนปัจจุบัน</h1>
+  </div>
+</div>
+
+<div class="containerer">
+  <div class="grid">
+      <div class="card">
+          <div class="card_img">
+              <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/445F/production/_119330571_gettyimages-1229925855.jpg" alt="">
+          </div>
+          <div class="card_body">
+              <h2 class="card_title">ภาวะโลกร้อนเปลี่ยนแปลงสภาพป่าไม้</br>ของแคนนาดาไปมากขนาดไหน?</h2>
+              <p>เมื่อวันที่ 3 กรกฎาคม 2022 ที่ผ่านมา ได้เกิดเหตุไฟป่าบริเวณตะวันตกของประเทศแคนนาดา ผู้เชี่ยวชาญชี้ว่าการเปลี่ยนแปลงสภาพภูมิอากาศเป็นสาเหตุให้เกิดไฟป่าในช่วงต้นและช่วงที่อากาศร้อนจัด ส่งผลให้มีก๊าซเผาไหม้ถูกปล่อยสู่ชั้นบรรยากาศเป็นจำนวนมาก และยังมีผู้เสียชีวิตจากเหตุการณ์ดังกล่าวอีกด้วย </p>
+              <p class="card_author">ขอขอบคุณข้อมูลจาก <a href="https://blog.resolutefp.com/2017/07/climate-change-affecting-canadas-forests/" target="_blank" class="author_link">The Resolute Blog</a></p>
+          </div>
+      </div>
+      <div class="card">
+          <div class="card_img">
+              <img src="https://www.innovationnewsnetwork.com/wp-content/uploads/2021/07/iStock-Revolu7ion93-696x392.jpg" alt="">
+          </div>
+          <div class="card_body">
+              <h2 class="card_title">พายุแถบยุโรปทวีความรุนแรงขึ้นทุกปี</br>จากภาวะโลกร้อน</h2>
+              <p>จากการศึกษาและสำรวจของมหาวิทยาลัยนิวคาสเซิล สหราชอาณาจักร และทีมวิจัยเดอะเมท ออฟฟิส พบว่า ความถี่ในการเกิดพายุในประเทศแถบยุโรปและใกล้เคียงเกิดขึ้นอย่างต่อเนื่องและทวีความรุนแรงขึ้นเรื่อยๆ จากการเปลี่ยนแปลงทางสภาพอากาศในช่วงหลายปีมานี้</p>
+              <p class="card_author">ขอขอบคุณข้อมูลจาก <a href="https://www.innovationnewsnetwork.com/european-storms-exacerbated-by-the-effects-of-climate-change/13292/" target="_blank" class="author_link">สำนักข่าว Innovasion Newsnetwork</a></p>
+          </div>
+      </div>
+      <div class="card">
+          <div class="card_img">
+              <img src="https://www.thaifrx.com/wp-content/uploads/2022/08/220829170402-greenland-icebergs-file-063022-super-tease.jpg" alt="">
+          </div>
+          <div class="card_body">
+              <h2 class="card_title">ระดับน้ำทะเลมีความสูงขึ้นอย่างมาก </br>ผู้คนนับร้อยล้านอาจไร้ถิ่นที่อยู่</h2>
+              <p>ระดับน้ำทะเลของโลกสูงขึ้นทุกๆ ปี นับตั้งแต่หมดยุคน้ำแข็งเมื่อ 18,000 ปีที่ผ่านมา อุณหภูมิที่มากขึ้นของโลกค่อยๆ ส่งผลให้โลกมีระดับน้ำที่สูงขึ้น ทั้งแผ่นน้ำแข็งขั้วโลกที่ละลายจากการเปลี่ยนแปลงของอุณหภูมิในช่วงศวรรตที่ผ่านมา ประเทศแถบชายฝั่งทะเลและประเทศที่อยู่ระดับต่ำกว่าน้ำทะเลจะได้รับผลกระทบมากที่สุด</p>
+              <p class="card_author">ขอขอบคุณข้อมูลจาก <a href="http://www.climate.tmd.go.th/content/article/20" target="_blank" class="author_link">กรมอุตุนิยมวิทยา</a></p>
+          </div>
+      </div>
+      <div class="card">
+        <div class="card_img">
+            <img src="https://i0.wp.com/eos.org/wp-content/uploads/2021/12/petm-fish-warming.jpg?fit=1200%2C675&ssl=1" alt="">
+        </div>
+        <div class="card_body">
+            <h2 class="card_title">ปลากว่าร้อยสายพันธุ์อพยพขึ้นทางเหนือ</br>เพื่อหนีการเปลี่ยนแปลงของสภาพอากาศ</h2>
+            <p>ชาวประมงอังกฤษและทั่วโลกต่างได้รายงานถึงผลกระทบของภาวะโลกร้อนที่ส่งผลต่อการล่าปลาที่ผันผวน เพราะปลาและหอยหลายชนิดที่เคยหาได้ ต่างอพยพเพื่อหนีการเปลี่ยนแปลงทางสภาพอากาศที่พวกมันไม่คุ้นเคย ส่งผลต่อทั้งเศรษฐกิจและระบบนิเวศดั้งเดิมของพวกมันเป็นอย่างมาก</p>
+            <p class="card_author">ขอขอบคุณข้อมูลจาก <a href="https://www.independent.co.uk/climate-change/news/fish-migrate-climate-change-north-seafood-fishermen-cod-sea-bass-king-crab-a8354861.html" target="_blank" class="author_link">สำนักข่าว Independent </a></p>
+        </div>
+    </div>
+    <div class="card">
+      <div class="card_img">
+          <img src="https://media.cnn.com/api/v1/images/stellar/prod/230221094230-01-venice-low-tide-021623-restricted.jpg?c=original" alt="">
+      </div>
+      <div class="card_body">
+          <h2 class="card_title">ภัยแล้งทำพิษคลองเวนิชระดับน้ำต่ำ</h2>
+          <p>ภาพคลองในเวนิสแห้งเหือดในปีนี้บ่งบอกถึงสัญญาณว่าอิตาลีอาจจะต้องเจอภัยแล้งอย่างหนัก ทั้งนี้นอกจากคลื่นความร้อนเมื่อช่วงต้นปีที่ส่งผลกระทบแล้ว อิตาลียังประสบภาวะแล้งเป็นระยะเวลานานตั้งแต่ช่วงฤดูร้อนในปี 2022 ซึ่งเป็นผลจากเกิดหิมะบนเทือกเขาแอลป์น้อยเกินไปตามข้อมูลของผู้เชี่ยวชาญด้านสิ่งแวดล้อม</p>
+          <p class="card_author">ขอขอบคุณข้อมูลจาก <a href="https://www.greenpeace.org/thailand/story/26510/climate-venice-drought/" target="_blank" class="author_link">Greenpeace Thailand</a></p>
+      </div>
+  </div>
+  <div class="card">
+    <div class="card_img">
+        <img src="https://media.npr.org/assets/img/2022/03/25/gettyimages-1204403352_custom-b57f1586125913ba175169785d6459210a281ca7-s1100-c50.jpg" alt="">
+    </div>
+    <div class="card_body">
+        <h2 class="card_title">โลกร้อนกระทบแนวปะการังฟอกขาว 3 ปีซ้อน</h2>
+        <p>นักวิทยาศาสตร์ ชี้ปีนี้ทั่วโลกเผชิญปัญหาปะการังฟอกขาวคิดเป็นร้อยละ 33 ของแนวปะการังทั่วโลก แนวโน้มจะรุนแรงและถี่มากขึ้น หลังการเปลี่ยนแปลงของสภาพภูมิอากาศ ทำให้อุณหภูมิน้ำทะเลสูงขึ้น หากปะการังทั่วโลกสูญพันธุ์กระทบชีวิตมนุษย์และสัตว์ที่เหลืออยู่</p>
+        <p class="card_author">ขอขอบคุณข้อมูลจาก <a href="https://www.thaipbs.or.th/news/content/280320" target="_blank" class="author_link">สำนักข่าว Thai PBS</a></p>
+    </div>
+</div>
+  </div>
+</div>
+
+  <footer>
+    <div class="footer-content">
+      <h3>Global Warming เปลี่ยนโลกร้อน เป็นโลกรัก</h3>
+      <p>เว็บไซต์เพื่อการเรียนรู้จากโครงงาน "เว็บหรรษา พารักโลก" </br> วิชาเทคโนโลยีสีเขียว 03600012 หมู่ 1 </p>
+    </div>
+
+    <div class="footer-bottom">
+      <p>ออกแบบและสร้างเว็บโดยพวกเรากลุ่ม Big_juan</p>
+    </div>
+  </footer>
+
+    <script src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

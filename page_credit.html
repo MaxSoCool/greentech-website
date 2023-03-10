@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="picture/logot.png">
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <!-- Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;500&display=swap" rel="stylesheet">
+
+    <title>Global Warming เปลี่ยนโลก "ร้อน" เป็นโลก "รัก"</title>
+
+    <link rel ="stylesheet" href="/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body{
+        font-family: 'Kanit', sans-serif;
+        background-color:(black);
+        background-size: cover;
+        background-position: center;
+      }
+
+      .menu-bar{
+        background: #2c5462;
+        text-align: center;
+      }
+
+      .menu-bar ul{
+        display: inline-flex;
+        list-style: none;
+        color: #ffff;
+      }
+
+      .menu-bar ul li{
+        width: 200px;
+        margin: 15px;
+        padding: 15px;
+      }
+
+      .menu-bar ul li a{
+        text-decoration: none;
+        color: #ffff;
+      }
+
+      .active, .menu-bar ul li:hover{
+        background: #60868f;
+        border-radius: 4px;
+        transition: all 0.25s ease;
+      }
+
+      .menu-bar .bi{
+        margin-right: 12px;
+      }
+
+      .sub-menu-global{
+        display: none;
+      }
+
+      .menu-bar ul li:hover .sub-menu-global{
+        display: block;
+        position: absolute;
+        background: #2c5462;
+        margin-top: 15px;
+        margin-left: -15px;
+      }
+
+      .menu-bar ul li:hover .sub-menu-global ul{
+        display: block;
+        margin: 10px;
+
+      }
+
+      .menu-bar ul li:hover .sub-menu-global ul li{
+        width: 200px;
+        padding: 10px;
+        border-bottom: 2px dotted #ffff;
+        background: transparent;
+        border-radius: 0;
+        text-align: left;
+
+      }
+
+      .menu-bar ul li:hover .sub-menu-global ul li:last-child{
+        border-bottom: none;
+      }
+
+      .menu-bar ul li:hover .sub-menu-global ul li a:hover{
+        color:#f2cd93;
+      }
+
+      .article-takecare{
+        width: 1200px;
+        height: 300px;
+        text-align: left;
+        margin: 0 auto;
+      }
+
+      .takecare_header{
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .takecare_info1{
+        width: 1000px;
+        height: 1650px;
+        text-align: left;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 18px;
+        padding-top: 40px;
+      }
+
+      .takecare_info2{
+        width: 1000px;
+        height: 300px;
+        text-align: justify;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 22px;
+        padding-top: 40px;
+      }
+
+      .takecare_info3{
+        width: 1000px;
+        height: 300px;
+        text-align: left;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 22px;
+        padding-top: 40px;
+      }
+
+      .takecare_info4{
+        width: 1000px;
+        height: 300px;
+        text-align: left;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 22px;
+        padding-top: 40px;
+      }
+
+      .takecare_info5{
+        width: 1000px;
+        height: 700px;
+        text-align: left;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 22px;
+        padding-top: 40px;
+      }
+
+      .home-picture-static{
+        text-align: center;
+        background-color: #69868f;
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 60px 80px;
+      }
+
+      .home-header{
+        color: #ffff;
+        text-shadow: 4px 2.5px #333333;
+      }
+
+      footer{
+          background:#19353f;
+          height: auto;
+          width: auto;
+          padding-top: 140px;
+          color: #FFF;
+        }
+
+        .footer-content{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .footer-content h3{
+          font-size: 1.8rem;
+          font-weight: 400;
+          text-transform: capitalize;
+          line-height: 3rem;
+        }
+
+        .footer-content p{
+          max-width: 500px;
+          margin: 10px auto;
+          line-height: 28px;
+          font-size: 14px;
+        }
+
+        .footer-bottom {
+          background: #112830;
+          width: auto;
+          padding: 20px 0;
+          text-align: center;
+        }
+
+        .footer-bottom p{
+          font-size: 14px;
+          word-spacing: 2px;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class = "menu-bar"> 
+<ul>
+  <li><a href="page_home.html"><i class="bi bi-house-door-fill" ></i>หน้าหลัก</a></li>
+  <li><a href="#"><i class="bi bi-globe-asia-australia"></i>ภาวะโลกร้อน</a>
+    <div class="sub-menu-global">
+      <ul>
+        <li><a href="page_intro.html">ภาวะโลกร้อนคืออะไร</a></li>
+        <li><a href="page_danger.html">ผลกระทบของภาวะโลกร้อน</a></li>
+        <li><a href="page_thai.html">ภาวะโลกร้อนในประเทศไทย</a></li>
+      </ul>
+    </div>
+  </li>
+
+  <li><a href="page_takecare.html"><i class="bi bi-chat-heart-fill"></i>การรับมือ</a></li>
+  <li><a href="#static"><i class="bi bi-clipboard-data-fill"></i>สถานการณ์ปัจจุบัน</a></li>
+  <li  class = "active" ><a href="#"><i class="bi bi-question-circle-fill"></i>เกี่ยวกับ</a>
+    <div class = "sub-menu-global">
+      <ul>
+        <li><a href="page_about.html">รายละเอียดโครงงาน</a></li>
+        <li><a href="#">แหล่งที่มาข้อมูล</a></li>
+      </ul>
+    </div>
+  </li>
+</ul>
+</div>
+
+<article class="takecare">
+    <h1 class="takecare_header"> แหล่งที่มาข้อมูล</h1>
+    <p class="takecare_info1">- ศูนย์ภูมิอากาศ กรมอุตุนิยมวิทยา. (2556). <i>สภาวะโลกร้อน.</i> สืบค้นเมื่อ 1 มีนาคม 2566, จาก :</br><a href="http://climate.tmd.go.th/content/file/11"> http://climate.tmd.go.th/content/file/11. </a>
+    </br></br>- Elyse DeFranco. (2021). <i>Ancient Fish Thrived During a Period of Rapid Global Warming.</i> Retrieved May 2 2023, from :</br><a href="https://eos.org/articles/ancient-fish-thrived-during-a-period-of-rapid-global-warming"> https://eos.org/articles/ancient-fish-thrived-during-a-period-of-rapid-global-warming. </a>
+    </br></br>- Innovasion Newsnetwork. (2021). <i>European storms exacerbated by the effects of climate change.</i> Retrieved May 2 2023, from :</br><a href="https://www.innovationnewsnetwork.com/european-storms-exacerbated-by-the-effects-of-climate-change/13292/"> https://www.innovationnewsnetwork.com/european-storms-exacerbated-by-the-effects-of-climate-change/13292/. </a>
+    </br></br>- The Resolute Blog. (2022). <i>How climate change is affecting Canada's forest.</i> Retrieved May 2 2023, from :</br><a href="https://blog.resolutefp.com/2017/07/climate-change-affecting-canadas-forests/"> https://blog.resolutefp.com/2017/07/climate-change-affecting-canadas-forests/. </a>
+    </br></br>- Spring News. (2564). <i>ไฟป่าโหมกระหน่ำใส่ตะวันตกของแคนาดา ผลจากฮีทเวฟที่สูงเป็นประวัติการณ์.</i> สืบค้นเมื่อ 2 มีนาคม 2566, จาก :</br><a href="https://www.springnews.co.th/news/811760"> https://www.springnews.co.th/news/811760. </a>
+    </br></br>- CNN Travel. (2023). <i>Venice canals run dry amid fears Italy faces another drought.</i> Retrieved May 3 2023, from :</br><a href="https://edition.cnn.com/travel/article/venice-canal-drought-italy-climate-scli-intl/index.html"> https://edition.cnn.com/travel/article/venice-canal-drought-italy-climate-scli-intl/index.html. </a>
+    </br></br>- Supang Chatuchinda. (2566). <i>สภาพอากาศยุโรปปั่นป่วน ! เผชิญภัยแล้งที่ระดับน้ำในคลองเวนิสลดต่ำจนแล่นเรือไม่ได้.</i></br> สืบค้นเมื่อ 3 มีนาคม 2566, จาก :</br><a href="https://www.greenpeace.org/thailand/story/26510/climate-venice-drought/"> https://www.greenpeace.org/thailand/story/26510/climate-venice-drought/. </a>
+    </br></br>- Rex Weyler. (2562). <i>9 วิธีที่มนุษย์เปลี่ยนสภาพภูมิอากาศยุคปัจจุบันไปตลอดกาล.</i>สืบค้นเมื่อ 4 มีนาคม 2566, จาก :</br><a href="https://www.greenpeace.org/thailand/story/7684/9-ways-humans-have-altered-earths-holocene-climate/"> https://www.greenpeace.org/thailand/story/7684/9-ways-humans-have-altered-earths-holocene-climate/.</a>
+    </br></br>- Greenpeace. (2562). <i>ผลกระทบของภาวะโลกร้อน.</i>สืบค้นเมื่อ 4 มีนาคม 2566, จาก :</br><a href="https://www.greenpeace.org/thailand/explore/protect/climate/impacts/"> https://www.greenpeace.org/thailand/explore/protect/climate/impacts/.</a>
+    </br></br>- Thai PBS. (2562). <i>วิกฤต! โลกร้อนกระทบทั่วโลกเผชิญปะการังฟอกขาว 3 ปีซ้อน.</i>สืบค้นเมื่อ 4 มีนาคม 2566, จาก :</br><a href="https://www.thaipbs.or.th/news/content/280320"> https://www.thaipbs.or.th/news/content/280320.</a>
+    </br></br>- Coopernicus. (2021). <i>How close are we to reaching a global warming of 1.5°C?.</i> Retrieved May 5 2023, from :</br><a href="https://climate.copernicus.eu/how-close-are-we-reaching-global-warming-15degc"> https://climate.copernicus.eu/how-close-are-we-reaching-global-warming-15degc. </a>
+    </br></br>- องค์การบริหารจัดการก๊าซเรือนกระจก. (2562). <i>ความรู้ด้านก๊าซเรือนกระจก.</i>สืบค้นเมื่อ 6 มีนาคม 2566, จาก :</br><a href="http://www.tgo.or.th/2020/index.php/th/page/ปรากฏการณ์ก๊าซเรือนกระจก-319"> http://www.tgo.or.th/2020/index.php/th/page/ปรากฏการณ์ก๊าซเรือนกระจก-319.</a>
+    </br></br>- กานต์ กาญจนพิชญ์. (2561). <i>Nitrous oxide.</i>สืบค้นเมื่อ 6 มีนาคม 2566, จาก :</br><a href="https://www.summacheeva.org/occtox/nitrous_oxide"> https://www.summacheeva.org/occtox/nitrous_oxide.</a>
+    </br></br>- SET Social Impact. (2560). <i>มาทำความรู้จักก๊าซเรือนกระจกกันเถอะ.</i>สืบค้นเมื่อ 6 มีนาคม 2566, จาก :</br><a href="https://climate.setsocialimpact.com/carethebear/article/detail/9"> https://climate.setsocialimpact.com/carethebear/article/detail/9.</a>
+    </br></br>- Nareerat Webserver. (2557). <i>สาเหตุของการตัดไม้ทำลายป่า.</i>สืบค้นเมื่อ 6 มีนาคม 2566, จาก :</br><a href="https://sites.google.com/a/nareerat.ac.th/the-deforestation-407/page3"> https://sites.google.com/a/nareerat.ac.th/the-deforestation-407/page3.</a> 
+    </br></br>- Charlotte Pointing. (2023). <i>Is Global Warming Real? The Short Answer Is Yes, But Here’s Why.</i> Retrieved May 6 2023, from :</br><a href="https://www.greenqueen.com.hk/is-global-warming-real/"> https://www.greenqueen.com.hk/is-global-warming-real/. </a>
+  </p>
+
+</article>
+
+  <footer>
+    <div class="footer-content">
+      <h3>Global Warming เปลี่ยนโลกร้อน เป็นโลกรัก</h3>
+      <p>เว็บไซต์เพื่อการเรียนรู้จากโครงงาน "เว็บหรรษา พารักโลก" </br> วิชาเทคโนโลยีสีเขียว 03600012 หมู่ 1 </p>
+    </div>
+
+    <div class="footer-bottom">
+      <p>ออกแบบและสร้างเว็บโดยพวกเรากลุ่ม Big_juan</p>
+    </div>
+  </footer>
+
+    <script src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

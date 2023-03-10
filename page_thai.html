@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="picture/logot.png">
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <!-- Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;500&display=swap" rel="stylesheet">
+
+    <title>Global Warming เปลี่ยนโลก "ร้อน" เป็นโลก "รัก"</title>
+
+    <link rel ="stylesheet" href="/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body{
+        font-family: 'Kanit', sans-serif;
+        background-color:(black);
+        background-size: cover;
+        background-position: center;
+      }
+
+      .menu-bar{
+        background: #2c5462;
+        text-align: center;
+      }
+
+      .menu-bar ul{
+        display: inline-flex;
+        list-style: none;
+        color: #ffff;
+      }
+
+      .menu-bar ul li{
+        width: 200px;
+        margin: 15px;
+        padding: 15px;
+      }
+
+      .menu-bar ul li a{
+        text-decoration: none;
+        color: #ffff;
+      }
+
+      .active, .menu-bar ul li:hover{
+        background: #60868f;
+        border-radius: 4px;
+        transition: all 0.25s ease;
+      }
+
+      .menu-bar .bi{
+        margin-right: 12px;
+      }
+
+      .sub-menu-global{
+        display: none;
+      }
+
+      .menu-bar ul li:hover .sub-menu-global{
+        display: block;
+        position: absolute;
+        background: #2c5462;
+        margin-top: 15px;
+        margin-left: -15px;
+      }
+
+      .menu-bar ul li:hover .sub-menu-global ul{
+        display: block;
+        margin: 10px;
+
+      }
+
+      .menu-bar ul li:hover .sub-menu-global ul li{
+        width: 200px;
+        padding: 10px;
+        border-bottom: 2px dotted #ffff;
+        background: transparent;
+        border-radius: 0;
+        text-align: left;
+
+      }
+
+      .menu-bar ul li:hover .sub-menu-global ul li:last-child{
+        border-bottom: none;
+      }
+
+      .menu-bar ul li:hover .sub-menu-global ul li a:hover{
+        color:#f2cd93;
+      }
+
+      .article-thai{
+        width: 1200px;
+        height: 300px;
+        text-align: left;
+        margin: 0 auto;
+      }
+
+      .thai_header{
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .thai_info1{
+        width: 1000px;
+        height: 600px;
+        text-align: left;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 22px;
+        padding-top: 40px;
+      }
+
+      .thai_info2{
+        width: 1000px;
+        height: 970px;
+        text-align: justify;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 22px;
+        padding-top: 40px;
+      }
+
+      .thai_info3{
+        width: 1000px;
+        height: 800px;
+        text-align: left;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 22px;
+        padding-top: 40px;
+      }
+
+      .thai_info4{
+        width: 1000px;
+        height: 1200px;
+        text-align: left;
+        font-weight: 350;
+        margin: 0 auto;
+        font-size: 22px;
+        padding-top: 40px;
+      }
+
+      .home-picture-static{
+        text-align: center;
+        background-color: #69868f;
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 60px 80px;
+      }
+
+      .home-header{
+        color: #ffff;
+        text-shadow: 4px 2.5px #333333;
+      }
+
+      .bodydy {
+          align-items: center;
+          background-color: #F3F5F7;
+          font-family: 'Poppins',
+              sans-serif;
+          width: 100%;
+          min-height: 100vh;
+          color: #1B1C34;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+
+
+      .containery {
+          max-width: 70%;
+          margin: 0 auto;
+          height: 100%;
+      }
+
+      .grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 3%;
+          margin: 5% 0;
+      }
+
+      .card {
+          overflow: hidden;
+          padding: 20px;
+          background-color: #FFF;
+          border-radius: 30px;
+          text-align: center;
+      }
+
+
+      .card_img img {
+          width: 100%;
+          height: auto;
+          border-radius: 20px;
+      }
+
+      .card_body {
+          padding: 26px 20px 36px 20px;
+      }
+
+      .card_title {
+          font-family: 'Kanit', sans-serif;
+          font-weight: 700;
+          text-transform: capitalize;
+
+          font-size: 28px;
+          padding-bottom: 20px;
+      }
+
+      .card_body p {
+          text-align: left;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 1.7;
+
+      }
+
+      p.card_author {
+          text-align: center;
+          font-size: 15px;
+          padding-top: 15px;
+
+      }
+
+      p.card_author a {
+          color: #1B1C34;
+          font-style: italic;
+      }
+
+      p.card_author a:hover {
+          font-weight: bold;
+      }
+
+      .link {
+          position: fixed;
+          background-color: #D12322;
+          padding: 23px 40px;
+          right: -106px;
+          border-radius: 5px;
+          top: 50%;
+          transform: translateY(-50%);
+          transform: rotate(-90deg);
+          font-size: 18px;
+          font-weight: 500;
+          color: #FFF;
+          text-decoration: none;
+          text-transform: capitalize;
+          transition: all .1s ease-in-out;
+      }
+
+      .link i {
+          padding-left: 7px;
+      }
+
+      .link:hover {
+          text-decoration: underline;
+          background-color: black;
+      }
+
+      @media only screen and (max-width: 1441px) and (min-width: 1025px) {
+          .container {
+              max-width: 80%;
+          }
+
+          .grid {
+              gap: 2%;
+          }
+
+          .card {
+              padding: 15px;
+          }
+
+          .card_body {
+              padding: 15px;
+          }
+
+          .card_title {
+              font-size: 22px;
+              padding-bottom: 14px;
+          }
+
+          .card_body p {
+              font-size: 16px;
+          }
+
+          a.read_more {
+              padding: 19px 0;
+              width: 60%;
+              font-size: 11px;
+              margin-top: 30px;
+          }
+
+      }
+
+      @media only screen and (max-width: 1024px) {
+
+          .grid {
+              grid-template-columns: 1fr;
+              gap: 2%;
+          }
+      }
+
+      @media only screen and (max-width: 425px) {
+          .container {
+              max-width: 90%;
+          }
+
+          .card {
+              padding: 20px 10px;
+          }
+
+          .card_body {
+              padding: 7px;
+          }
+
+          .card_title {
+              font-size: 20px;
+              padding-bottom: 7px;
+          }
+
+          .card_body p {
+              font-size: 14px;
+          }
+
+          a.read_more {
+              padding: 15px 0;
+              margin-top: 20px;
+          }
+
+      }
+      
+      footer{
+          background:#19353f;
+          height: auto;
+          width: auto;
+          padding-top: 140px;
+          color: #FFF;
+        }
+
+        .footer-content{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .footer-content h3{
+          font-size: 1.8rem;
+          font-weight: 400;
+          text-transform: capitalize;
+          line-height: 3rem;
+        }
+
+        .footer-content p{
+          max-width: 500px;
+          margin: 10px auto;
+          line-height: 28px;
+          font-size: 14px;
+        }
+
+        .footer-bottom {
+          background: #112830;
+          width: auto;
+          padding: 20px 0;
+          text-align: center;
+        }
+
+        .footer-bottom p{
+          font-size: 14px;
+          word-spacing: 2px;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class = "menu-bar"> 
+<ul>
+  <li><a href="page_home.html"><i class="bi bi-house-door-fill" ></i>หน้าหลัก</a></li>
+  <li class = "active" ><a href="#"><i class="bi bi-globe-asia-australia"></i>ภาวะโลกร้อน</a>
+    <div class="sub-menu-global">
+      <ul>
+        <li><a href="page_intro.html">ภาวะโลกร้อนคืออะไร</a></li>
+        <li><a href="page_danger.html">ผลกระทบของภาวะโลกร้อน</a></li>
+        <li><a href="#">ภาวะโลกร้อนในประเทศไทย</a></li>
+      </ul>
+    </div>
+  </li>
+
+  <li><a href="page_takecare.html"><i class="bi bi-chat-heart-fill"></i>การรับมือ</a></li>
+  <li><a href="#static"><i class="bi bi-clipboard-data-fill"></i>สถานการณ์ปัจจุบัน</a></li>
+  <li><a href="page_takecare.html"><i class="bi bi-question-circle-fill"></i>เกี่ยวกับ</a>
+    <div class = "sub-menu-global">
+      <ul>
+        <li><a href="page_about.html">รายละเอียดโครงงาน</a></li>
+        <li><a href="page_credit.html">แหล่งที่มาข้อมูล</a></li>
+      </ul>
+    </div>
+  </li>
+</ul>
+</div>
+
+<article class="thai">
+    <h1 class="thai_header"> ภาวะโลกร้อนในประเทศไทย</h1>
+    <center><img src="https://static.vecteezy.com/system/resources/thumbnails/013/314/057/original/time-lapse-of-small-hut-in-village-in-valley-of-green-rice-terrace-in-rural-area-of-northern-thailand-with-mist-flow-and-raining-in-morning-video.jpg" height="40%" width="40%"></br> ภาพ: https://www.vecteezy.com/video/13314057-time-lapse-of-small-hut-in-village-</br>in-valley-of-green-rice-terrace-in-rural-area-of-northern-thailand-with-mist-flow-and-raining-in-morning </center>
+    <p class="thai_info1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ประเทศไทยเราเองก็เป็นหนึ่งในประเทศที่ได้รับผลกระทบของภาวะโลกร้อนเป็นอย่างมาก โดยประเทศไทยมีแนวโน้มการปล่อยก๊าซเรือนกระจกเพิ่มสูงขึ้นจากกิจกรรมการพัฒนาประเทศจากข้อมูลการปล่อยก๊าซเรือนกระจกในปี 2554 มีปริมาณการปล่อยก๊าซเรือนกระจก 305.52 ล้านตันคาร์บอนไดออกไซด์ และจากการคาดการณ์ปริมาณการปล่อยมีสูงถึง 555 ล้านตันคาร์บอนไดออกไซด์เทียบเท่าในปี 2573 โดยภาคเศรษฐกิจที่มีสัดส่วนการปล่อยก๊าซเรือนกระจกมากที่สุดคือ ภาคพลังงาน รองลงมาคือ ภาคเกษตร กระบวนการทางอุตสาหกรรม และของเสีย (สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม 2559)
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ประกอบกับการจัดลำดับขององค์กร Germanwatch ระบุว่าประเทศไทยเป็นประเทศ 1 ใน 10 ที่มีความเสี่ยงสูงต่อการเปลี่ยนแปลงสภาพภูมิอากาศในระยะยาว และการคาดการณ์การเปลี่ยนแปลงสภาพภูมิอากาศของศูนย์ภูมิอากาศ กรมอุตุนิยมวิทยา สรุปว่าในอีก 20 ปีข้างหน้า (พ.ศ. 2559–2578) ประเทศไทยมีอุณหภูมิเฉลี่ยเพิ่มสูงขึ้น และมีอุณหภูมิสูงสุดเฉลี่ยมากกว่า 35 องศาเซลเซียสในช่วงฤดูร้อน ปริมาณน้ำฝนรายปีเฉลี่ยเพิ่มมากขึ้น และจำนวนวันฝนตกในช่วงฤดูฝนและการกระจายตัวของฝนเพิ่มขึ้น ทำให้ส่งผลกระทบต่อปริมาณน้ำในแหล่งน้ำ และมีภาวะเสี่ยงต่อการเกิดภัยแล้งและอุทกภัยในบางพื้นที่ ซึ่งกระทบต่อการจัดการน้ำของประเทศในภาคส่วนต่างๆ เช่น ภาคเกษตร และภาคเมือง
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;โดยได้เริ่มมีผลกระทบต่างๆ ภายในประเทศให้พวกเราได้เห็นกันแล้ว
+    </br></br><b>- น้ำท่วมสูง (Flood)</b></p>
+
+    <center><img src="https://apicms.thestar.com.my/uploads/images/2019/09/15/272008.jpg" height="40%" width="40%"></br> ภาพ: https://www.thestar.com.my/news/regional/2019/09/15/23000-flee-after-floods-in-northeast-thailand </center>
+    <p class="thai_info2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;แบบจำลองสภาพภูมิอากาศจากหลายๆประเทศ ชี้ว่าภายในปี 2100 เหตุการณ์น้ำท่วมรุนแรง จะเกิดเพิ่มขึ้นหลายเท่าจากแต่ก่อน โดยมีโอกาสเกิด 3-6 ครั้ง ในช่วง 100 ปี ต่างจากสมัยก่อนที่เกิดเพียง 1 ครั้งต่อ 100 ปี เขตเอเชียตะวันออกเฉียงใต้มีแนวโน้มที่จะเกิดฝนตกหนักและน้ำท่วมบ่อยครั้งขึ้น ทั้งนี้ก็เนื่องจากผลกระทบของการเปลี่ยนแปลงสภาพภูมิอากาศ ภาวะโลกที่ร้อน ทำให้มีการละลายของภูเขาน้ำแข็งแถบขั้วโลกที่เพิ่มมากขึ้น เป็นเหตุให้ปริมาณน้ำในแม่น้ำ และทะเลเพิ่มขึ้นตามลำดับ
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ในช่วง 30 ปีที่ผ่านมา พื้นที่ชุมชนของไทยมักจะประสบกับปัญหาอุทกภัยบ่อยครั้ง โดยส่วนใหญ่จะเกิดในเขตชุมชนที่ตั้งอยู่ในพื้นที่เสี่ยงต่อการเกิดอุทกภัย โดยเฉพาะแถบชายฝั่งด้านตะวันออก และทางใต้ของประเทศซึ่งตั้งอยู่ใกล้มหาสมุทร ในเขตเมืองใหญ่อย่าง กรุงเทพมหานคร หาดใหญ่ และเชียงใหม่ก็ประสบปัญหาน้ำท่วมเช่นกัน โดยเฉพาะช่วงหน้าฝน ทั้งนี้ก็เนื่องจากปริมาณน้ำมีมากกว่าที่กักเก็บ และระบบระบายน้ำยังไม่มีประสิทธิภาพพอ 
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ผลกระทบจากการเกิดน้ำท่วม นำความเสียหายอย่างมหาศาลมาสู่ชีวิตและทรัพย์สินขึ้น น้ำที่ไหลบ่าเข้าท่วมพื้นที่ได้ทำลายสิ่งที่เป็นโครงสร้างพื้นฐาน เช่น ถนนหนทาง สิ่งก่อสร้างต่างๆ เป็นต้น ทำลายพืชผลทางการเกษตร ชะล้างหน้าดินทำให้ดินเสื่อมสภาพ เกิดการปนเปื้อนของน้ำ และคร่าชีวิตประชาชนจำนวนมาก
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;นอกจากนี้ปัญหาน้ำท่วมขังในบางพื้นที่ยังส่งผลต่อการแพร่ของโรคระบาดทั้งในมนุษย์ พืชและสัตว์ และมีการระบาดของแมลงศัตรูพืชที่สำคัญในการเกษตร ประชาชนต้องสูญเสียที่ทำกิน ต้องอพยพย้ายถิ่น ผลผลิตระดับท้องถิ่นและระดับประเทศลดลง มีผลให้ประชาชนเกิดวิกฤตทางอารมณ์ซึ่งมีผลต่อการก่ออาชญากรรมที่สูงขึ้น
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ประเทศไทยยังมีความอ่อนไหวต่อสภาวะน้ำท่วมและแผ่นดินถล่ม ดังนั้นจึงต้องให้ความสำคัญต่อการตั้งถิ่นฐานในบริเวณริมฝั่งแม่น้ำหรือชายฝั่งทะเลเพราะพื้นที่เหล่านี้ถือเป็นพื้นที่เสี่ยงต่อการเกิดอุทกภัยซึ่งอาจเกิดได้ในอนาคต โดยอาจมีสาเหตุจากการเปลี่ยนแปลงสภาพภูมิอากาศหรือปัจจัยอื่นๆ ซึ่งหากเกิดภัยพิบัติโดยไม่เตรียมการป้องกันย่อมส่งผลกระทบต่อเศรษฐกิจและสังคมของประเทศโดยรวม
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ปริมาณน้ำในโลกลดลงโดยเฉลี่ยร้อยละ 21-31 ต่อปี สืบเนื่องจากความเข้มข้นของก๊าซเรือนกระจกที่มีมากขึ้น ส่งผลให้ปริมาณรังสีดวงอาทิตย์ บริเวณผิวโลกสูงขึ้น ปริมาณน้ำในโลกลดลงโดยเฉลี่ยร้อยละ 21-31 ต่อปี สืบเนื่องจากความเข้มข้นของก๊าซเรือนกระจกที่มีมากขึ้น ส่งผลให้ปริมาณรังสีดวงอาทิตย์บริเวณผิวโลกสูงขึ้น ทำให้อุณหภูมิสูงขึ้น การเพิ่มขึ้นของอุณหภูมิบริเวณผิวโลกนี้ส่งผลให้ปริมาณน้ำฝนและการระเหยของน้ำมีการเปลี่ยนแปลงไป ปริมาณน้ำในลำธารและน้ำใต้ดินลดลงเนื่องจากระเหยแห้งไปกับความร้อนที่สูงขึ้นหมด ทำให้ปริมาณฝนตกน้อยลงหรือทิ้งช่วงเป็นเวลานาน เกิดภาวะแห้งแล้งขึ้น
+    </br></br><b>- ความแห้งแล้ง (Drought)</b></p>
+
+    <center><img src="https://www.eastasiaforum.org/wp-content/uploads/2020/03/2016-04-11T120000Z_2087886180_GF10000378197_RTRMADP_3_THAILAND-DROUGHT-scaled.jpg" height="40%" width="40%"></br> ภาพ: https://www.eastasiaforum.org/2020/03/20/thailands-water-shortage-and-inequality-crisis/ </center>
+    <p class="thai_info3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ในฐานะที่ประเทศไทยเป็นประเทศเกษตรกรรม ทรัพยากรน้ำจึงถือเป็นปัจจัยหนึ่งที่สำคัญต่อการพัฒนาประเทศ ปัญหาทรัพยากรน้ำอันดับต้นๆ ของไทยที่สำคัญคือ ปัญหาการขาดแคลนน้ำ และสภาวะแห้งแล้ง ในประเทศไทย
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ภาวะแห้งแล้งขาดน้ำ จะเกิดขึ้นในหน้าแล้งและหน้าร้อน มีสาเหตุมาจากฝนทิ้งช่วงเป็นเวลานาน ทำให้แหล่งน้ำตามธรรมชาติแห้ง ไม่เพียงพอต่อการอุปโภคบริโภคของประชาชน ซึ่งปรากฏการณ์ฝนทิ้งช่วงเป็นเวลานานนี้ก็เกิดเป็นผลต่อเนื่องมาจากสภาวะที่โลกร้อนขึ้น 
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สภาวะแห้งแล้งนี้มีผลกระทบต่อการทำเกษตรของไทยอย่างยิ่ง การปลูกพืชเศรษฐกิจของไทยที่มีปัญหาอยู่เสมอ เช่น พื้นที่เพาะปลูกข้าวโพดมีจำกัด ผลผลิตต่อหน่วยพื้นที่ต่ำเนื่องจากความแปรปรวนของน้ำฝนมีแนวโน้มเพิ่มขึ้น ปัญหาปริมาณน้ำฝนที่ไม่สม่ำเสมอก็ยังมีผลกระทบต่อการทำไร่อ้อยด้วย 
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ในปี 2534 ประเทศไทยเกิดปรากฏการณ์ฝนทิ้งช่วง พร้อมกับอากาศร้อนและแห้งแล้งตามด้วยความชื้นสัมพัทธ์ในอากาศสูงติดต่อกันยาวนานในภาคเหนือ เกิดการระบาดของโรคไหม้ของต้นข้าวระยะคอรวง (neck blast) ในข้าวพันธุ์ กข 6 อย่างรุนแรง โดยเฉพาะอย่างยิ่งในเขตจังหวัดเชียงใหม่ และลำพูน ซึ่งมีสิ่งแวดล้อมที่เหมาะสมกับการระบาดของโรคดังกล่าว ถือเป็นปรากฏการณ์ที่ไม่เคยเกิดขึ้นมาก่อน 
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ล่าสุดในปี 2547 ในภาคตะวันออกเฉียงเหนือตอนกลางและตอนล่าง ฤดูฝนสิ้นสุดเร็วมาก ตั้งแต่เดือนกันยายนทำให้ข้าวขาดน้ำในการสร้างเมล็ดจึงทำให้คุณภาพของลดลง
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;มีความเป็นไปได้สูงที่สัตว์และพืชหลายๆ สายพันธุ์ในประเทศไทยจะลดลง และสูญพันธุ์ไป เป็นผลมาจากการเปลี่ยนแปลงสภาพภูมิอากาศ และการกระจายของแหล่งที่อยู่ เนื่องจากพืชและสัตว์จะรับสัญญาณจากภูมิอากาศในการเปลี่ยนแปลงวงจรชีวิตให้สมบูรณ์ สามารถสืบทอดขยายพันธุ์ต่อไปได้ อุณหภูมิที่เพิ่มขึ้นและปริมาณน้ำฝนที่เปลี่ยนแปลงไป มีผลให้สิ่งมีชีวิตในระบบนิเวศ รวมถึงป่าไม้ต้องมีการปรับตัวเพื่อให้อยู่รอดในภาวะที่โลกร้อนขึ้น มีการปรากฏการสูญพันธุ์ของสิ่งมีชีวิตบางชนิดในบริเวณพื้นที่ยอดเขา 2-3 แห่ง ที่ไม่สามารถอพยพย้ายถิ่นไปอยู่ในเขตที่สูงขึ้น หรือปรับตัวให้เข้ากับอากาศที่อุ่นขึ้นได้ ทำให้ผลผลิตจากป่าลดลง สูญเสียแหล่งพันธุกรรม ซึ่งเป็นทรัพยากรอันมีค่ายิ่งของประเทศ
+    </br></br><b>- ความหลากหลายทางชีวภาพ (Biodiversity)</b></p>
+
+    <center><img src="https://www.biofin.org/sites/default/files/content/news_media/1.jpg" height="40%" width="40%"></br> ภาพ: https://www.biofin.org/news-and-media/finance-key-conserving-thailands-biodiversity</center>
+    <p class="thai_info4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ภูมิภาคอินโด-พม่า (Indo-Burma) ซึ่งรวมถึงประเทศไทยจัดอยู่ในบริเวณที่มีความเสี่ยงสูง หรือพื้นที่วิกฤต (hot spot) ต่อการสูญเสียทรัพยากรชีวภาพ เนื่องจากมีความหลากหลายของทรัพยากรมาก แต่ได้รับการดูแลต่ำที่สุด ซึ่งเมื่อเกิดการเปลี่ยนแปลงสภาพภูมิอากาศ สถานการณ์การสูญเสียทรัพยากรชีวภาพจะทวีความรุนแรงยิ่งขึ้น
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การเปลี่ยนสภาพภูมิอากาศที่มีผลต่อระดับน้ำในแหล่งน้ำ มีผลทำให้ความหลากหลายทางชีวภาพลดลง ในบริเวณที่ระดับน้ำลดต่ำ พื้นที่ชายฝั่งจะเกิดการเปลี่ยนแปลงอย่างมาก โดยเฉพาะในบริเวณที่เป็นแอ่งเก็บน้ำหรือทะเลสาบน้ำตื้น พืชน้ำและพืชชุ่มน้ำโดยรอบจะลดลง ส่งผลกระทบต่อการย้ายถิ่นที่อยู่ของสัตว์น้ำ และการลดลงหรือหายไปของพืช เกิดความเสื่อมถอยด้านการผลิตชีวมวล หรือแม้แต่การสูญพันธุ์ของปลา และสัตว์ไม่มีกระดูกสันหลังที่ต้องพึ่งพิงลักษณะเฉพาะทางนิเวศริมฝั่งน้ำ นอกจากนี้การเปลี่ยนแปลงปริมาณน้ำใต้ดินที่ไหลลงสู่แหล่งน้ำ ( throughflow) 
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;อันเป็นผลมาจากการเปลี่ยนแปลงสภาพภูมิอากาศ ก็สามารถกระทบต่อการสูญเสียทรัพยากรชีวภาพได้เช่นกัน แม้ระดับน้ำจะคงเดิมก็ตามอุณหภูมิของน้ำทะเลเพิ่มขึ้น และการละลายของน้ำแข็งขั้วโลกซึ่งส่งผลกระทบให้องค์ประกอบทางเคมีของน้ำทะเลมีการเปลี่ยนแปลง เป็นผลให้สัตว์ทะเลบางชนิดไม่สามารถปรับตัวเข้ากับสภาพของน้ำที่เปลี่ยนไป มีการแพร่กระจาย และขยายพันธุ์ โรคของสัตว์น้ำบางชนิดให้รุนแรงขึ้นจนทำให้สัตว์ทะเลบางชนิดมีจำนวนลดลงหรือสูญพันธุ์ไป
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ปริมาณน้ำ และอาณาเขตของแหล่งน้ำที่ลดลง ส่งผลให้ความเข้มข้นของธาตุอาหารในน้ำ เช่น ไนโตรเจน และฟอสฟอรัส ทำให้แหล่งน้ำกลายเป็น Eutrophication หรือแหล่งสะสมธาตุที่กระตุ้นให้สาหร่ายและวัชพืชน้ำเจริญในปริมาณมาก มีผลทำให้ปริมาณออกซิเจนในน้ำลดลง เป็นอันตรายต่อสิ่งมีชีวิตในน้ำชนิดอื่นๆ ทำให้ความหลากหลายทางชีวภาพลดลง คุณภาพของแหล่งน้ำลดลง ก่อเกิดปัญหาสุขอนามัยต่อชุมชนที่ต้องพึ่งพาแหล่งน้ำนั้นๆ
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;บริเวณที่ฝนตกหนัก สารมลภาวะที่เป็นกรดในอากาศจะถูกชะล้างลงแหล่งน้ำมากขึ้น ความเป็นกรดนี้ก็มีส่วนทำลายความหลากหลายทางชีวภาพด้วยเช่นกัน
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การศึกษาผลกระทบของการเปลี่ยนแปลงสภาพภูมิอากาศที่มีต่อความหลากหลายทางชีวภาพทำได้โดยวางแปลงถาวร (Permanent Mountain Line Transect) ตามแนวเทือกเขาผ่านความสูงจากระดับน้ำทะเลต่างๆ หรือวางแปลงถาวรแนวตามเหนือใต้ผ่านระบบนิเวศต่างๆ แล้วติดตามความหลากหลาย ประชากร การแพร่กระจาย พร้อมทั้งตรวจสภาพภูมิอากาศควบคู่กันไป โดยเน้นที่ป่าสนและป่าร้อนชื้น เพราะคาดว่าจะได้รับผลกระทบจากการเปลี่ยนแปลงภูมิอากาศมาก โดยเฉพาะป่าร้อนชื้นจะเกิดการเปลี่ยนแปลงอย่างรวดเร็ว เนื่องจากการใช้ที่ดินผิดวิธี และการทำลายป่า รวมทั้งมีจำนวนประชากรที่หนาแน่น
+    </p>
+
+</article>
+
+<div class="home-picture-static">
+  <div class="col-md-5 p-lg-5 mx-auto my-5">
+    <h1 id = "static" class="home-header">สถานการณ์โลกร้อนปัจจุบัน</h1>
+  </div>
+</div>
+
+<div class="containerer">
+  <div class="grid">
+      <div class="card">
+          <div class="card_img">
+              <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/445F/production/_119330571_gettyimages-1229925855.jpg" alt="">
+          </div>
+          <div class="card_body">
+              <h2 class="card_title">ภาวะโลกร้อนเปลี่ยนแปลงสภาพป่าไม้</br>ของแคนนาดาไปมากขนาดไหน?</h2>
+              <p>เมื่อวันที่ 3 กรกฎาคม 2022 ที่ผ่านมา ได้เกิดเหตุไฟป่าบริเวณตะวันตกของประเทศแคนนาดา ผู้เชี่ยวชาญชี้ว่าการเปลี่ยนแปลงสภาพภูมิอากาศเป็นสาเหตุให้เกิดไฟป่าในช่วงต้นและช่วงที่อากาศร้อนจัด ส่งผลให้มีก๊าซเผาไหม้ถูกปล่อยสู่ชั้นบรรยากาศเป็นจำนวนมาก และยังมีผู้เสียชีวิตจากเหตุการณ์ดังกล่าวอีกด้วย </p>
+              <p class="card_author">ขอขอบคุณข้อมูลจาก <a href="https://blog.resolutefp.com/2017/07/climate-change-affecting-canadas-forests/" target="_blank" class="author_link">The Resolute Blog</a></p>
+          </div>
+      </div>
+      <div class="card">
+          <div class="card_img">
+              <img src="https://www.innovationnewsnetwork.com/wp-content/uploads/2021/07/iStock-Revolu7ion93-696x392.jpg" alt="">
+          </div>
+          <div class="card_body">
+              <h2 class="card_title">พายุแถบยุโรปทวีความรุนแรงขึ้นทุกปี</br>จากภาวะโลกร้อน</h2>
+              <p>จากการศึกษาและสำรวจของมหาวิทยาลัยนิวคาสเซิล สหราชอาณาจักร และทีมวิจัยเดอะเมท ออฟฟิส พบว่า ความถี่ในการเกิดพายุในประเทศแถบยุโรปและใกล้เคียงเกิดขึ้นอย่างต่อเนื่องและทวีความรุนแรงขึ้นเรื่อยๆ จากการเปลี่ยนแปลงทางสภาพอากาศในช่วงหลายปีมานี้</p>
+              <p class="card_author">ขอขอบคุณข้อมูลจาก <a href="https://www.innovationnewsnetwork.com/european-storms-exacerbated-by-the-effects-of-climate-change/13292/" target="_blank" class="author_link">สำนักข่าว Innovasion Newsnetwork</a></p>
+          </div>
+      </div>
+      <div class="card">
+          <div class="card_img">
+              <img src="https://www.thaifrx.com/wp-content/uploads/2022/08/220829170402-greenland-icebergs-file-063022-super-tease.jpg" alt="">
+          </div>
+          <div class="card_body">
+              <h2 class="card_title">ระดับน้ำทะเลมีความสูงขึ้นอย่างมาก </br>ผู้คนนับร้อยล้านอาจไร้ถิ่นที่อยู่</h2>
+              <p>ระดับน้ำทะเลของโลกสูงขึ้นทุกๆ ปี นับตั้งแต่หมดยุคน้ำแข็งเมื่อ 18,000 ปีที่ผ่านมา อุณหภูมิที่มากขึ้นของโลกค่อยๆ ส่งผลให้โลกมีระดับน้ำที่สูงขึ้น ทั้งแผ่นน้ำแข็งขั้วโลกที่ละลายจากการเปลี่ยนแปลงของอุณหภูมิในช่วงศวรรตที่ผ่านมา ประเทศแถบชายฝั่งทะเลและประเทศที่อยู่ระดับต่ำกว่าน้ำทะเลจะได้รับผลกระทบมากที่สุด</p>
+              <p class="card_author">ขอขอบคุณข้อมูลจาก <a href="http://www.climate.tmd.go.th/content/article/20" target="_blank" class="author_link">กรมอุตุนิยมวิทยา</a></p>
+          </div>
+      </div>
+      <div class="card">
+        <div class="card_img">
+            <img src="https://i0.wp.com/eos.org/wp-content/uploads/2021/12/petm-fish-warming.jpg?fit=1200%2C675&ssl=1" alt="">
+        </div>
+        <div class="card_body">
+            <h2 class="card_title">ปลากว่าร้อยสายพันธุ์อพยพขึ้นทางเหนือ</br>เพื่อหนีการเปลี่ยนแปลงของสภาพอากาศ</h2>
+            <p>ชาวประมงอังกฤษและทั่วโลกต่างได้รายงานถึงผลกระทบของภาวะโลกร้อนที่ส่งผลต่อการล่าปลาที่ผันผวน เพราะปลาและหอยหลายชนิดที่เคยหาได้ ต่างอพยพเพื่อหนีการเปลี่ยนแปลงทางสภาพอากาศที่พวกมันไม่คุ้นเคย ส่งผลต่อทั้งเศรษฐกิจและระบบนิเวศดั้งเดิมของพวกมันเป็นอย่างมาก</p>
+            <p class="card_author">ขอขอบคุณข้อมูลจาก <a href="https://www.independent.co.uk/climate-change/news/fish-migrate-climate-change-north-seafood-fishermen-cod-sea-bass-king-crab-a8354861.html" target="_blank" class="author_link">สำนักข่าว Independent </a></p>
+        </div>
+    </div>
+    <div class="card">
+      <div class="card_img">
+          <img src="https://media.cnn.com/api/v1/images/stellar/prod/230221094230-01-venice-low-tide-021623-restricted.jpg?c=original" alt="">
+      </div>
+      <div class="card_body">
+          <h2 class="card_title">ภัยแล้งทำพิษคลองเวนิชระดับน้ำต่ำ</h2>
+          <p>ภาพคลองในเวนิสแห้งเหือดในปีนี้บ่งบอกถึงสัญญาณว่าอิตาลีอาจจะต้องเจอภัยแล้งอย่างหนัก ทั้งนี้นอกจากคลื่นความร้อนเมื่อช่วงต้นปีที่ส่งผลกระทบแล้ว อิตาลียังประสบภาวะแล้งเป็นระยะเวลานานตั้งแต่ช่วงฤดูร้อนในปี 2022 ซึ่งเป็นผลจากเกิดหิมะบนเทือกเขาแอลป์น้อยเกินไปตามข้อมูลของผู้เชี่ยวชาญด้านสิ่งแวดล้อม</p>
+          <p class="card_author">ขอขอบคุณข้อมูลจาก <a href="https://www.greenpeace.org/thailand/story/26510/climate-venice-drought/" target="_blank" class="author_link">Greenpeace Thailand</a></p>
+      </div>
+  </div>
+  <div class="card">
+    <div class="card_img">
+        <img src="https://media.npr.org/assets/img/2022/03/25/gettyimages-1204403352_custom-b57f1586125913ba175169785d6459210a281ca7-s1100-c50.jpg" alt="">
+    </div>
+    <div class="card_body">
+        <h2 class="card_title">โลกร้อนกระทบแนวปะการังฟอกขาว 3 ปีซ้อน</h2>
+        <p>นักวิทยาศาสตร์ ชี้ปีนี้ทั่วโลกเผชิญปัญหาปะการังฟอกขาวคิดเป็นร้อยละ 33 ของแนวปะการังทั่วโลก แนวโน้มจะรุนแรงและถี่มากขึ้น หลังการเปลี่ยนแปลงของสภาพภูมิอากาศ ทำให้อุณหภูมิน้ำทะเลสูงขึ้น หากปะการังทั่วโลกสูญพันธุ์กระทบชีวิตมนุษย์และสัตว์ที่เหลืออยู่</p>
+        <p class="card_author">ขอขอบคุณข้อมูลจาก <a href="https://www.thaipbs.or.th/news/content/280320" target="_blank" class="author_link">สำนักข่าว Thai PBS</a></p>
+    </div>
+</div>
+  </div>
+</div>
+
+  <footer>
+    <div class="footer-content">
+      <h3>Global Warming เปลี่ยนโลกร้อน เป็นโลกรัก</h3>
+      <p>เว็บไซต์เพื่อการเรียนรู้จากโครงงาน "เว็บหรรษา พารักโลก" </br> วิชาเทคโนโลยีสีเขียว 03600012 หมู่ 1 </p>
+    </div>
+
+    <div class="footer-bottom">
+      <p>ออกแบบและสร้างเว็บโดยพวกเรากลุ่ม Big_juan</p>
+    </div>
+  </footer>
+
+    <script src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
